@@ -1,87 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Akaya+Kanadaka&family=Rowdies:wght@300;400;700&display=swap");
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f4f4f9;
+  font-family: "Rowdies", sans-serif;
+  background-color: #f1f5f9 !important;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
 }
 
-
+/** --------BARRA DE NAVEGACIÓN--------- **/
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #4c1d95;
+  position: fixed;
+  color: #fff;
+  padding: 10px 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border: none;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease; /* Efecto al hacer scroll */
+}
+header:hover {
+  background-color: #2e1065ce;
+}
+
+head.scrolled {
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
 header img {
-    width: 50px;
-    height: auto;
-    vertical-align: middle;
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
 }
 
-header nav {
-    display: inline-block;
-    margin-left: 20px;
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+.navbar-nav .nav-item {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  transition: background-color 0.3s;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
+header nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.navbar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  background-color: #2e1065fa;
+  border-radius: 20px;
 }
 
-header nav ul li {
-    display: inline;
+.input {
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.719);
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+.boton-search {
+  margin-top: -4px;
+  padding: 10px 15px 10px 15px;
+  font-size: 15px;
+  border: none;
+  background-color: #52796f;
+  color: rgb(249, 250, 250);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: none !important;
+}
+button i {
+  justify-content: center;
+  align-items: center;
+  transition: none !important;
+}
+.d-flex {
+  width: 40%;
+  gap: 5px;
+  margin: 0 10% 0 20%;
 }
 
-header nav ul li a:hover {
-    background-color: #555;
-    border-radius: 4px;
-}
+@media (max-width: 1000px) {
+  .nav {
+    transition: none !important; /* Desactivar todas las transiciones en dispositivos móviles */
+    background-color: #333;
+  }
+  .navbar-nav {
+    width: 100%;
+    margin-bottom: 80px !important;
+  }
 
+  header nav:hover .nav-link {
+    color: rgb(
+      255,
+      255,
+      255
+    ) !important; /* Texto negro cuando el fondo es blanco */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
+  }
+
+  .nav-search-div {
+    transform: translateY(480%) translateX(-25%);
+    width: 80%;
+  }
+
+  .input {
+    width: 70%;
+  }
+}
+/** ----------------- **/
 
 main {
-    padding: 20px;
-    text-align: center;
+  background-color: #f1f5f9 !important;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 20px;
+  text-align: center;
 }
 
 main h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 main p {
-    font-size: 1.1em;
-    color: #555;
+  text-align: justify;
+  width: 50%;
+  font-size: 1.1em;
+  color: #555;
+  margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  main p {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  main p {
+    width: 80%;
+  }
+}
+/**------------------------------**/
+
+/**--------FOOTER ----------**/
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+  background-color: #6d28d9;
+  color: #fff;
+  text-align: center;
+  padding-top: 2%;
 }
 
 footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer ul li {
-    font-size: 0.9em;
-    line-height: 1.4;
+  font-size: 0.9em;
+  line-height: 1.4;
 }

@@ -1,40 +1,186 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/core/css/estilos.css">
-    <title>Nombre de la Aplicación</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+/>
+
+<!-- Bootstrap Icons (para usar íconos de Bootstrap) -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+
+<!-- Font Awesome (para otros íconos) -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}" />
+    <title>Nombre de la Aplicación</title>
+  </head>
+  <body>
     <header>
-        <img src="imagen.jpg" alt="Logo de la Aplicación" id="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#acerca-de">Acerca de</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+      <nav class=" navbar navbar-expand-lg navbar-dark navbar">
+        <div class="container-fluid">
+          <!--Logo de la App-->
+          <a href="{% url 'home' %}">
+            <img
+              src=""
+              alt="Logo de la App"
+              class="rounded"
+              width="130"
+              height="60"
+            />
+          </a>
+
+          <!-- Botón menú (oculto)-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon white-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse text-white"
+            id="navbarSupportedContent"
+          >
+            <!--Barra de búsqueda-->
+        <form class="d-flex nav-search-div " role="search">
+              <input
+                class="input me-2  "
+                type="text"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+       
+              <button class="boton-search ">
+                <i class="fas fa-search"></i>
+              </button>
+          </form>
+
+        <!-- Links de Navegación -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a href="{% url 'acercade' %}" class="nav-link">Acerca de</a></li>
+              <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Nombre de la Aplicación</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum quo harum tempora vitae voluptates veniam eum maxime consequatur est illum totam quisquam praesentium, impedit, minus, facere mollitia inventore ratione.</p>
-        </section>
+      <section id="home">
+        <h1>Nombre de la Aplicación</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          ipsum quo harum tempora vitae voluptates veniam eum maxime consequatur
+          est illum totam quisquam praesentium, impedit, minus, facere mollitia
+          inventore ratione. </br>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </p>
+      </section>
     </main>
 
+
+
+    <!--Footer-->
+    <footer class="text-white text-center footer-container bg-footer">
+      <!-- Grid container -->
+      <div class="container p-4 footer-container">
+        <!--Grid row-->
+        <div class="row mt-4">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0 ">
+            <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
+
+            <p>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti.
+            </p>
+
+            <p>
+              Blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias.
+            </p>
+
+          </div>
+
+          <!--Grid column-->
+          <div class="grid-column col-lg-4 col-md-6 mb-4 mb-md-0 ">
+            
+            <div class="form-outline form-white mb-4 ">
+              <input
+                type="text"
+                id="formControlLg"
+                class="form-control form-control-lg"
+              />
+        
+            </div>
+
+            <ul class="fa-ul" style="margin-left: 1.65em">
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-home"></i></span
+                ><span class="ms-2">San Salvador de Jujuy, 4600, Argentina</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-envelope"></i></span
+                ><span class="ms-2">Email: contacto@aplicacion.com</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone"></i></span
+                ><span class="ms-2">Teléfono: 388-508-4464</span>
+              </li>
+            </ul>
+          </div>
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" >
+            <h5 class="text-uppercase mb-4">Horario de atención</h5>
+
+            <table class="table text-center text-white">
+              <tbody class="fw-normal">
+                <tr>
+                  <td>Lunes - Viernes:</td>
+                  <td>8am - 9pm</td>
+                </tr>
+                <tr>
+                  <td>Sabados - Domingos:</td>
+                  <td>8am - 1am</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 Copyright Fi Unju:
   
-    <footer>
-        <p>Contacto:</p>
-        <ul>
-            <li>Teléfono: 388-508-4464</li>
-            <li>Email: contacto@aplicacion.com</li>
-            <li>Dirección: Calle 519, San Salvador de Jujuy, Argentina</li>
-        </ul>
+      </div>
     </footer>
 
-</body>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
 </html>
