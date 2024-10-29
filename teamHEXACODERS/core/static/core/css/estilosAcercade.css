@@ -1,0 +1,61 @@
+
+/*titulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    color: #040303;
+}
+.text-light-green {
+    color: #32CD32; 
+}
+.text-blue {
+    color: #03346E;
+}
+.text-red {
+    color: #ff0000;
+}
+*
+.tarjetas
+{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    padding: 30px 20px;
+    position: relative;
+    width: 250px;
+    min-height: 250px; 
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+    gap: 10px;
+    text-align: center;
+}
+
+
+.tarjeta_img {
+    width: 80%; /* Ajusta para que no ocupe toda la tarjeta */
+    height: auto;
+}
+
+
+.ancho-letras2{
+    top: 100px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.tarjeta p, .tarjeta h3 {
+    margin-bottom: 10px; 
+}
+
