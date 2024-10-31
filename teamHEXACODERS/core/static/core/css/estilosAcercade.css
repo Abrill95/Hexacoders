@@ -1,4 +1,12 @@
 /* Contenedor general */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif; 
+}
+
 .container-acercade {
   margin-top: 10% !important;
   margin-bottom: 5%;
@@ -27,6 +35,12 @@ h6 {
 }
 .text-red {
   color: #ff0000;
+}
+h3, p, .card-title, .card-text {
+  text-align: left;
+}
+h1, h2 {
+  text-align: center;
 }
 
 /**----  Tarjetas de presentación------**/
