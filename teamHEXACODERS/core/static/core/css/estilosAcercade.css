@@ -108,9 +108,9 @@ h6 {
 }
 
 .card-sup:hover .item-card-sup {
-  background-color: #6d28d9;
+  background-color: #0ea5e9;
   transform: translateZ(100px) rotateX(75deg);
-  box-shadow: 10px 10px 10px #33b9b3, -10px -10px 10px #8912ad;
+  box-shadow: 10px 10px 10px #33b9b3, -10px -10px 10px #075985;
 }
 
 .card-sup:hover .img-te {
@@ -141,7 +141,7 @@ h6 {
   width: 128px;
   border-radius: 50%;
   z-index: 1;
-  background-color: #6d28d9;
+  background-color: #0ea5e9;
   transition: all 1s ease;
 }
 
