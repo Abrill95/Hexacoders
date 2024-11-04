@@ -85,7 +85,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
               </li>
             </ul>
           </div>
@@ -94,11 +94,12 @@
     </header>
 
     <main class="container-acercade my-5">
-
       <section  class="info">
       <div class="container">
         <div class="row">
           <div class="col">
+            <br>
+            <br>
             <h1 class="fs-4 mb-3">NUESTRO NEGOCIO.</h1>
             <p>
               Es una plataforma en línea especializada en la venta de
@@ -108,15 +109,13 @@
               ofreciendo a nuestros clientes una experiencia de compra fácil,
               segura y respaldada por un equipo de profesionales dedicados.
             </p>
-          </br>
-             </br>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="fs-4 mb-3">NUESTRA HISTORIA Y VISIÓN.</h2>
+            <h1 class="fs-4 mb-3">NUESTRA HISTORIA Y VISIÓN.</h1>
             <p>
               Nuestro proyecto nació de una idea compartida por un grupo de
               estudiantes con el objetivo de facilitar la gestión de ventas de
@@ -132,7 +131,6 @@
               compromiso con la excelencia y la satisfacción del cliente.
             </p>
                </br>
-                  </br>
           </div>
         </div>
       </div>
@@ -146,7 +144,7 @@
               <div class="row">
                 <div class="col-md-4 mb-3">
                   <i class="fas fa-check-circle fa-2x text-success"></i>
-                  <h5>Calidad y compromiso</h5>
+                  <h4>Calidad y compromiso</h4>
                   <p>
                     Nos esforzamos en ofrecer electrodomésticos que cumplan con
                     los más altos estándares de calidad, garantizando
@@ -155,7 +153,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                   <i class="fas fa-users fa-2x text-primary"></i>
-                  <h5>Atención al cliente</h5>
+                  <h4>Atención al cliente</h4>
                   <p>
                     Nos enfocamos en brindar una experiencia de compra
                     personalizada y amigable, donde cada cliente se sienta
@@ -164,7 +162,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                   <i class="fas fa-leaf fa-2x text-light-green"></i>
-                  <h5>Sostenibilidad</h5>
+                  <h4>Sostenibilidad</h4>
                   <p>
                     Creemos en el impacto positivo que podemos tener en el medio
                     ambiente, por lo que nos comprometemos a ofrecer productos
@@ -173,7 +171,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                   <i class="fas fa-lightbulb fa-2x text-warning"></i>
-                  <h5>Innovación</h5>
+                  <h4>Innovación</h4>
                   <p>
                     Nos apasiona la tecnología y buscamos constantemente
                     integrar productos modernos y avanzados que mejoren la vida
@@ -182,7 +180,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                   <i class="fas fa-shield-alt fa-2x text-blue"></i>
-                  <h5>Responsabilidad</h5>
+                  <h4>Responsabilidad</h4>
                   <p>
                     Operamos de manera ética y transparente, promoviendo
                     prácticas de venta honestas y un trato respetuoso en cada
@@ -191,7 +189,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                   <i class="fas fa-heart fa-2x text-red"></i>
-                  <h5>Empatía</h5>
+                  <h4>Empatía</h4>
                   <p>
                     Nos esforzamos en entender y responder a las necesidades de
                     nuestros clientes.
@@ -324,36 +322,20 @@
         <!--Grid row-->
         <div class="row mt-4">
           <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0 ">
             <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
-
             <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti.
+              "SML: Simplificamos tu Mundo con Lo mejor en electrodomésticos."
             </p>
 
-            <p>
-              Blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias.
-            </p>
           </div>
 
           <!--Grid column-->
-          <div class="grid-column col-lg-4 col-md-6 mb-4 mb-md-0">
-            <div class="form-outline form-white mb-4">
-              <input
-                type="text"
-                id="formControlLg"
-                class="form-control form-control-lg"
-              />
-            </div>
-
+          <div class="grid-column col-lg-4 col-md-6 mb-4 mb-md-0 ">
             <ul class="fa-ul" style="margin-left: 1.65em">
               <li class="mb-3">
                 <span class="fa-li"><i class="fas fa-home"></i></span
-                ><span class="ms-2"
-                  >San Salvador de Jujuy, 4600, Argentina</span
-                >
+                ><span class="ms-2">San Salvador de Jujuy, 4600, Argentina</span>
               </li>
               <li class="mb-3">
                 <span class="fa-li"><i class="fas fa-envelope"></i></span
@@ -367,7 +349,7 @@
           </div>
 
           <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" >
             <h5 class="text-uppercase mb-4">Horario de atención</h5>
 
             <table class="table text-center text-white">
@@ -380,6 +362,7 @@
                   <td>Sabados - Domingos:</td>
                   <td>8am - 1am</td>
                 </tr>
+
               </tbody>
             </table>
           </div>
@@ -392,6 +375,7 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2024 Copyright Fi Unju:
+  
       </div>
     </footer>
 

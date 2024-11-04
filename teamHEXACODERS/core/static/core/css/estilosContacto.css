@@ -1,0 +1,56 @@
+/* Contenedor general */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif; 
+}
+main .container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1.5em;
+  color:  #243642;
+  padding: 10px;
+  border: 2px solid  #243642;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+}
+
+
+
+h2 {
+  color: #03346e;
+}
+
+.form-label {
+  color: #333333;
+}
+
+.form-control {
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #03346e;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #022b5b;
+}
+
+/* Estilo de placeholder */
+::placeholder {
+  color: #999;
+  opacity: 1; /* Opcional */
+}

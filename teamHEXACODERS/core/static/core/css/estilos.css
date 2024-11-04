@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Akaya+Kanadaka&family=Rowdies:wght@300;400;700&display=swap");
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #f1f5f9 !important;
   margin: 0;
   padding: 0;
@@ -128,20 +128,20 @@ main {
   margin-top: 10%;
   margin-bottom: 10%;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 main h1 {
   font-size: 2em;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 main p {
-  text-align: center;
-  width: 50%;
+  text-align: left;
+  width: 100%;
   font-size: 1.1em;
   color: #555;
-  margin: 0 auto;
 }
 
 @media (max-width: 900px) {
