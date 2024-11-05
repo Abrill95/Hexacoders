@@ -125,8 +125,7 @@ button i {
 
 main {
   background-color: #f1f5f9 !important;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin: 10%;
   padding: 20px;
   text-align: left;
 }

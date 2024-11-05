@@ -15,13 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
@@ -44,7 +50,6 @@
               src="{% static 'core/img/logo.png' %}"
               alt="Logo de la App"
               class="logo-img"
-             
             />
           </a>
 
@@ -87,31 +92,58 @@
               <li class="nav-item">
                 <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
               </li>
+              <li class="nav-item">
+                <a href="{% url 'productos' %}" class="nav-link">Productos</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <h1 class="text-center mb-4" style="font-size: 1.5em;">TEAM HEXACODERS</h1> 
+      <h1 class="text-center mb-4" style="font-size: 1.5em">TEAM HEXACODERS</h1>
       <div class="container my-5 col-md-6 mx-auto">
         <h2 class="text-center mb-4">Formulario de Contacto</h2>
         <form>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Escribe tu nombre"
+              required
+            />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="ejemplo@correo.com"
+              required
+            />
           </div>
           <div class="mb-3">
             <label for="telefono" class="form-label">Teléfono</label>
-            <input type="tel" class="form-control" id="telefono" placeholder="123-456-7890" required>
+            <input
+              type="tel"
+              class="form-control"
+              id="telefono"
+              placeholder="123-456-7890"
+              required
+            />
           </div>
           <div class="mb-3">
             <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+            <textarea
+              class="form-control"
+              id="mensaje"
+              rows="4"
+              placeholder="Escribe tu mensaje"
+              required
+            ></textarea>
           </div>
           <button type="submit" class="btn btn-primary w-100">Enviar</button>
         </form>
@@ -124,20 +156,21 @@
         <!--Grid row-->
         <div class="row mt-4">
           <!--Grid column-->
-          <div class="col-lg-4 col-md-12 mb-4 mb-md-0 ">
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
             <p>
               "SML: Simplificamos tu Mundo con Lo mejor en electrodomésticos."
             </p>
-
           </div>
 
           <!--Grid column-->
-          <div class="grid-column col-lg-4 col-md-6 mb-4 mb-md-0 ">
+          <div class="grid-column col-lg-4 col-md-6 mb-4 mb-md-0">
             <ul class="fa-ul" style="margin-left: 1.65em">
               <li class="mb-3">
                 <span class="fa-li"><i class="fas fa-home"></i></span
-                ><span class="ms-2">San Salvador de Jujuy, 4600, Argentina</span>
+                ><span class="ms-2"
+                  >San Salvador de Jujuy, 4600, Argentina</span
+                >
               </li>
               <li class="mb-3">
                 <span class="fa-li"><i class="fas fa-envelope"></i></span
@@ -151,7 +184,7 @@
           </div>
 
           <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" >
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-4">Horario de atención</h5>
 
             <table class="table text-center text-white">
@@ -164,7 +197,6 @@
                   <td>Sabados - Domingos:</td>
                   <td>8am - 1am</td>
                 </tr>
-
               </tbody>
             </table>
           </div>
@@ -177,7 +209,6 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2024 Copyright Fi Unju:
-  
       </div>
     </footer>
 
