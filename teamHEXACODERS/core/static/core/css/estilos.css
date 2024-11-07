@@ -59,10 +59,15 @@ header nav.scrolled {
   background-color: #0369a1;
   border-radius: 20px;
 }
+.logo{
+  width: 100px;
+  height: auto;
 
+  margin: -170px -170px -170px -10px !important;
+}
 .logo-img {
-  width: 80px;
-  margin: -12px 0 -15px 0 !important;
+  width: 100%;
+  padding: -20px;
 }
 
 .input {
