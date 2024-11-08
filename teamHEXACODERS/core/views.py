@@ -26,3 +26,9 @@ def productos(request):
     # Obtiene los productos para esa página
     productos_page = paginator.get_page(page_number)  #
     return render(request, "core/productos.html", {'productos': productos_page})
+
+#base.html
+def base(request):
+    return render(request, "core/base.html")
+
+

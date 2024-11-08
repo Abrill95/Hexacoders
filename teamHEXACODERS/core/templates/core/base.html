@@ -1,0 +1,84 @@
+{% load static %}
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SML |{% block title %} {% endblock %}</title>
+
+    <!-- Enlaces a fuentes, Bootstrap y CSS común -->
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}" />
+    <link rel="stylesheet" href="{% block extra_css %}{% endblock %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- Barra de navegación -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark navbar">
+        <div class="container-fluid">
+          <a href="{% url 'home' %}">
+            <img src="{% static 'core/img/logo.png' %}" alt="Logo de la App" class="logo-img" />
+          </a>
+          <!-- Botón menú -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon white-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{% url 'contacto' %}" class="nav-link">Contacto</a></li>
+              <li class="nav-item"><a href="{% url 'productos' %}" class="nav-link">Productos</a></li>
+              <li class="nav-item"><a href="{% url 'acercade' %}" class="nav-link">Acerca de</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      {% block main_content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container bg-footer text-white">
+      <div class="container p-4 text-center">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h5 class="text-uppercase">Sobre Nosotros</h5>
+            <p>"SML: Simplificamos tu Mundo con Lo mejor en electrodomésticos."</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <ul class="fa-ul" style="margin-left: 1.65em">
+              <li><span class="fa-li"><i class="fas fa-home"></i></span>San Salvador de Jujuy, 4600, Argentina</li>
+              <li><span class="fa-li"><i class="fas fa-envelope"></i></span>Email: contacto@aplicacion.com</li>
+              <li><span class="fa-li"><i class="fas fa-phone"></i></span>Teléfono: 388-508-4464</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5 class="text-uppercase">Horario de atención</h5>
+            <table class="table text-center text-white">
+              <tbody>
+                <tr><td>Lunes - Viernes:</td><td>8am - 9pm</td></tr>
+                <tr><td>Sábados - Domingos:</td><td>8am - 1am</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 Copyright Fi Unju
+      </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
