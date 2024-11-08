@@ -11,6 +11,9 @@ main{
   height: auto;
   text-align: center;
   border-radius: 15px;
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: -10%;
 }
 
 .image-banner {
@@ -23,10 +26,11 @@ main{
   transition: transform 0.5s ease; /* Transición suave */
 }
 
-.carrousel-banner .carousel-control-prev,
-.carrousel-banner  .carousel-control-next {
-  margin: 0 -8% 0 -8%;
-}
+  .carrousel-banner .carousel-control-prev,
+  .carrousel-banner .carousel-control-next {
+    transform: translateY(-20%); /* Ajuste fino para el centrado vertical */
+    padding: 10px;
+  }
 .carrousel-banner .carousel-control-prev-icon,
 .carrousel-banner  .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5);
@@ -35,51 +39,41 @@ main{
 }
 
 /* Responsive */
-@media (max-width: 720px) {
-  .main_banner_bg_desktop {
-    width: 100vw; /* Ajusta el tamaño máximo de la imagen */
-    height: 10vw;
-    margin-top: -5%;
+@media (min-width: 720px) and (max-width: 1200px) {
+  .carrousel-banner{
+    margin-bottom: -10%;
   }
-  .carrousel-banner .carousel-control-prev,
-  .carrousel-banner  .carousel-control-next {
-    margin: -30% -4% 0 -4%;
+
+}
+@media (min-width: 480px) and (max-width: 720px) {
+  .carrousel-banner{
+    margin-bottom: -20%;
   }
   .image-banner {
     width: 100%;
     height: auto;
     border-radius: 25px;
-    margin-top: 15%;
+    margin-top: 10%;
   }
 
 }
 
-@media (max-width: 767px) {
-  .main_banner_bg_desktop {
-    width: 100vw; /* Ajusta el tamaño máximo de la imagen */
-    height: 10vw;
-    margin-top: -5%;
-  }
-
-  .carrousel-banner .carousel-control-prev,
-  .carrousel-banner .carousel-control-next {
-    margin: -10% -4% 0 -4%;
-  }
+@media (max-width: 480px) {
 
   .image-banner {
     width: 90%;
     height: auto;
-
+    margin-top: 10%;
   }
 }
 
 
 /** --------SECCION DE PRODUCTOS------**/
 .todos-productos-principal {
-  margin-top: 0%;
+  margin-top: 10%;
 }
 .container {
-  max-width: 80%;
+  max-width: 75%;
 }
 
 /* Estilos de las tarjetas de productos */
@@ -95,6 +89,7 @@ main{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   justify-content: space-between;
+  margin-right: 10%;
 }
 
 .producto-card:hover {
@@ -202,7 +197,7 @@ main{
   color: #453db3;
   text-align: center;
   margin: 0;
-  margin-top: -12%;
+  margin-top: -8%;
   width: 100%;
 }
 .card-coutas{
@@ -289,7 +284,7 @@ main{
 
 @media (max-width: 480px) {
   .todos-productos-principal {
-    margin-top: -40%;
+    margin-top: -70%;
   }
   .container {
     max-width: 70%;
@@ -304,11 +299,10 @@ main{
 
 
 
-@media (max-width: 720px) {
+@media(min-width: 480px) and  (max-width: 720px) {
   .todos-productos-principal {
     margin-top: -10%;
   }
-
   .container {
     max-width: 90%;
 
@@ -318,10 +312,9 @@ font-size: 0.7rem;
     width: 40%;
   }
   }
-
-@media (max-width: 1200px) {
+@media (min-width: 720px) and (max-width: 1200px) {
   .todos-productos-principal {
-    margin-top: -15%;
+    margin-top: -10%;
   }
 
   .container {
