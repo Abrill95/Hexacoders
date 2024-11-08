@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
@@ -58,7 +57,7 @@ h1, h2 {
 
 /* Efecto de entrada */
 .main-container {
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out !important;
 }
 
 @keyframes fadeIn {
@@ -69,4 +68,26 @@ h1, h2 {
 /* Color de fondo de la sección */
 .contact-section {
   padding: 4rem 0;
+  border-radius: 40px;
+}
+
+.contact-section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #138496;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
