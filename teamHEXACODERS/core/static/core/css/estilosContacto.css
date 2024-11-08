@@ -1,56 +1,72 @@
-/* Contenedor general */
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-}
-main .container {
-  max-width: 600px;
-  padding: 20px;
+.main-container {
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-h1 {
-  font-size: 1.5em;
-  color:  #243642;
-  padding: 10px;
-  border: 2px solid  #243642;
-  border-radius: 5px;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  width: fit-content;
+.main-container:hover {
+  transform: scale(1.02);
 }
 
-
-
-h2 {
-  color: #03346e;
+h1, h2 {
+  font-weight: 600;
+  color: #343a40;
 }
 
 .form-label {
-  color: #333333;
+  color: #6c757d;
+  font-weight: bold;
 }
 
 .form-control {
-  border-radius: 4px;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+.form-control:focus {
+  box-shadow: 0 4px 8px rgba(23, 162, 184, 0.3);
+  border-color: #17a2b8;
+}
+
+/* Animación en el botón */
 .btn-primary {
-  background-color: #03346e;
+  background-color: #17a2b8;
   border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #022b5b;
+  background-color: #138496;
+  box-shadow: 0 4px 12px rgba(19, 132, 150, 0.3);
 }
 
-/* Estilo de placeholder */
-::placeholder {
-  color: #999;
-  opacity: 1; /* Opcional */
+.btn-primary:focus {
+  box-shadow: 0 4px 12px rgba(23, 162, 184, 0.5);
+}
+
+/* Efecto de entrada */
+.main-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Color de fondo de la sección */
+.contact-section {
+  padding: 4rem 0;
 }

@@ -1,67 +1,197 @@
-{% extends 'core/base.html' %}
 {% load static %}
-{% block title %} Contacto{% endblock %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-{% block nav %}
-<li class="nav-item">
-  <a href="{% url 'home' %}" class="nav-link">Home</a>
-</li>
-<li class="nav-item">
-  <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
-</li>
-<li class="nav-item">
-  <a href="{% url 'productos' %}" class="nav-link">Productos</a>
-</li>
-{% endblock %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-{% block content %}
-<main>
-  <h1 class="text-center mb-4" style="font-size: 1.5em">TEAM HEXACODERS</h1>
-  <div class="container my-5 col-md-6 mx-auto">
-    <h2 class="text-center mb-4">Formulario de Contacto</h2>
-    <form>
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/estilosContacto.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark navbar">
+        <div class="container-fluid">
+          <!--Logo de la App-->
+          <a href="{% url 'home' %}">
+            <img
+              src="{% static 'core/img/logo.png' %}"
+              alt="Logo de la App"
+              class="logo-img"
+             
+            />
+          </a>
+
+          <!-- Botón menú (oculto)-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon white-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse text-white"
+            id="navbarSupportedContent"
+          >
+            <!--Barra de búsqueda-->
+            <form class="d-flex nav-search-div" role="search">
+              <input
+                class="input me-2"
                 type="text"
-                class="form-control"
-                id="nombre"
-                placeholder="Escribe tu nombre"
-                required
-        />
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+
+              <button class="boton-search">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+
+            <!-- Links de Navegación -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="contact-section">
+      <h1 class="text-center mb-5" style="font-size: 2.5em; color: #495057;">TEAM HEXACODERS</h1>
+      <div class="container col-md-6 mx-auto main-container">
+        <h2 class="text-center mb-4" style="color: #17a2b8;">Formulario de Contacto</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" placeholder="123-456-7890" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo Electrónico</label>
-        <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="ejemplo@correo.com"
-                required
-        />
+      <div class="d-flex justify-content-center my-5">
+        <div class="col-lg-8 col-md-10 col-sm-12 p-4" style="width: 150%; margin-left: 50%">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1214.5439964695056!2d-65.2936566852415!3d-24.188572411717395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1731089856947!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="telefono" class="form-label">Teléfono</label>
-        <input
-                type="tel"
-                class="form-control"
-                id="telefono"
-                placeholder="123-456-7890"
-                required
-        />
+    </main>
+    <!--Footer-->
+    <footer class="text-white text-center footer-container bg-footer">
+      <!-- Grid container -->
+      <div class="container p-4 footer-container">
+        <!--Grid row-->
+        <div class="row mt-4">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0 ">
+            <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
+            <p>
+              "SML: Simplificamos tu Mundo con Lo mejor en electrodomésticos."
+            </p>
+
+          </div>
+
+          <!--Grid column-->
+          <div class="grid-column col-lg-4 col-md-6 mb-4 mb-md-0 ">
+            <ul class="fa-ul" style="margin-left: 1.65em">
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-home"></i></span
+                ><span class="ms-2">San Salvador de Jujuy, 4600, Argentina</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-envelope"></i></span
+                ><span class="ms-2">Email: contacto@aplicacion.com</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone"></i></span
+                ><span class="ms-2">Teléfono: 388-508-4464</span>
+              </li>
+            </ul>
+          </div>
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" >
+            <h5 class="text-uppercase mb-4">Horario de atención</h5>
+
+            <table class="table text-center text-white">
+              <tbody class="fw-normal">
+                <tr>
+                  <td>Lunes - Viernes:</td>
+                  <td>8am - 9pm</td>
+                </tr>
+                <tr>
+                  <td>Sabados - Domingos:</td>
+                  <td>8am - 1am</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
       </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea
-                class="form-control"
-                id="mensaje"
-                rows="4"
-                placeholder="Escribe tu mensaje"
-                required
-        ></textarea>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 Copyright Fi Unju:
+  
       </div>
-      <button type="submit" class="btn btn-primary w-100">Enviar</button>
-    </form>
-  </div>
-</main>
-{% endblock %}
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
