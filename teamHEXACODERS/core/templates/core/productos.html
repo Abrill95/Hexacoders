@@ -5,6 +5,17 @@
 <link rel="stylesheet" href="{% static 'core/css/estilosProductos.css' %}" />
 {% endblock %}
 
+{% block nav %}
+<li class="nav-item">
+  <a href="{% url 'home' %}" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+  <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
+</li>
+<li class="nav-item">
+  <a href="{% url 'productos' %}" class="nav-link">Acerca de</a>
+</li>
+{% endblock %}
 
 {% block content %}
 <main>

@@ -6,6 +6,17 @@
 <link rel="stylesheet" href="{% static 'core/css/estilosAcercade.css' %}" />
 {% endblock %}
 
+{% block nav %}
+<li class="nav-item">
+    <a href="{% url 'home' %}" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'productos' %}" class="nav-link">Productos</a>
+</li>
+{% endblock %}
 {% block content %}
 <main class="container-acercade my-5">
     <section  class="info">

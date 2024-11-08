@@ -3,6 +3,19 @@
 {% load static %}
 {% block title %} Home{% endblock %}
 
+{% block nav %}
+<li class="nav-item">
+    <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'productos' %}" class="nav-link">Productos</a>
+</li>
+{% endblock %}
+
+
 {% block content %}
 <main>
     <section id="home">
