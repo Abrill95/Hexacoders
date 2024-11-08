@@ -1,5 +1,5 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% block title %} Contacto{% endblock %}
 
 {% block content %}
@@ -11,41 +11,41 @@
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
         <input
-          type="text"
-          class="form-control"
-          id="nombre"
-          placeholder="Escribe tu nombre"
-          required
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder="Escribe tu nombre"
+                required
         />
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Correo Electrónico</label>
         <input
-          type="email"
-          class="form-control"
-          id="email"
-          placeholder="ejemplo@correo.com"
-          required
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="ejemplo@correo.com"
+                required
         />
       </div>
       <div class="mb-3">
         <label for="telefono" class="form-label">Teléfono</label>
         <input
-          type="tel"
-          class="form-control"
-          id="telefono"
-          placeholder="123-456-7890"
-          required
+                type="tel"
+                class="form-control"
+                id="telefono"
+                placeholder="123-456-7890"
+                required
         />
       </div>
       <div class="mb-3">
         <label for="mensaje" class="form-label">Mensaje</label>
         <textarea
-          class="form-control"
-          id="mensaje"
-          rows="4"
-          placeholder="Escribe tu mensaje"
-          required
+                class="form-control"
+                id="mensaje"
+                rows="4"
+                placeholder="Escribe tu mensaje"
+                required
         ></textarea>
       </div>
       <button type="submit" class="btn btn-primary w-100">Enviar</button>

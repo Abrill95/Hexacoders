@@ -26,11 +26,11 @@ main{
   transition: transform 0.5s ease; /* Transición suave */
 }
 
-  .carrousel-banner .carousel-control-prev,
-  .carrousel-banner .carousel-control-next {
-    transform: translateY(-20%); /* Ajuste fino para el centrado vertical */
-    padding: 10px;
-  }
+.carrousel-banner .carousel-control-prev,
+.carrousel-banner .carousel-control-next {
+  transform: translateY(-20%); /* Ajuste fino para el centrado vertical */
+  padding: 10px;
+}
 .carrousel-banner .carousel-control-prev-icon,
 .carrousel-banner  .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5);
@@ -308,10 +308,10 @@ main{
 
   }
   .card-descuento {
-font-size: 0.7rem;
+    font-size: 0.7rem;
     width: 40%;
   }
-  }
+}
 @media (min-width: 720px) and (max-width: 1200px) {
   .todos-productos-principal {
     margin-top: -10%;

@@ -1,135 +1,231 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% block title %} Acerca de{% endblock %}
 
-{% block extra_css %}
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="{% static 'core/css/estilos.css' %}" />
+{% block css %}
 <link rel="stylesheet" href="{% static 'core/css/estilosAcercade.css' %}" />
 {% endblock %}
 
 {% block content %}
 <main class="container-acercade my-5">
-    <section class="info">
+    <section  class="info">
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <br>
+                    <br>
                     <h1 class="fs-4 mb-3">NUESTRO NEGOCIO.</h1>
                     <p>
-                        Es una plataforma en línea especializada en la venta de electrodomésticos de alta calidad, orientada a brindar soluciones accesibles y convenientes para el hogar. Nuestro objetivo es simplificar la búsqueda y adquisición de productos esenciales, ofreciendo a nuestros clientes una experiencia de compra fácil, segura y respaldada por un equipo de profesionales dedicados.
+                        Es una plataforma en línea especializada en la venta de
+                        electrodomésticos de alta calidad, orientada a brindar soluciones
+                        accesibles y convenientes para el hogar. Nuestro objetivo es
+                        simplificar la búsqueda y adquisición de productos esenciales,
+                        ofreciendo a nuestros clientes una experiencia de compra fácil,
+                        segura y respaldada por un equipo de profesionales dedicados.
                     </p>
                 </div>
             </div>
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col">
                     <h1 class="fs-4 mb-3">NUESTRA HISTORIA Y VISIÓN.</h1>
                     <p>
-                        Nuestro proyecto nació de una idea compartida por un grupo de estudiantes con el objetivo de facilitar la gestión de ventas de electrodomésticos en un solo sitio. Con una visión enfocada en la innovación tecnológica y en satisfacer las necesidades modernas de los usuarios, nos propusimos crear una plataforma donde cada cliente encuentre productos confiables de las mejores marcas y a precios competitivos. Nuestra visión es convertirnos en una referencia en el sector de comercio electrónico de electrodomésticos, donde cada hogar tenga acceso a herramientas que mejoren su calidad de vida. Queremos que nuestro negocio sea reconocido no solo por su variedad de productos, sino por su compromiso con la excelencia y la satisfacción del cliente.
+                        Nuestro proyecto nació de una idea compartida por un grupo de
+                        estudiantes con el objetivo de facilitar la gestión de ventas de
+                        electrodomésticos en un solo sitio. Con una visión enfocada en la
+                        innovación tecnológica y en satisfacer las necesidades modernas de
+                        los usuarios, nos propusimos crear una plataforma donde cada
+                        cliente encuentre productos confiables de las mejores marcas y a
+                        precios competitivos. Nuestra visión es convertirnos en una
+                        referencia en el sector de comercio electrónico de
+                        electrodomésticos, donde cada hogar tenga acceso a herramientas
+                        que mejoren su calidad de vida. Queremos que nuestro negocio sea
+                        reconocido no solo por su variedad de productos, sino por su
+                        compromiso con la excelencia y la satisfacción del cliente.
                     </p>
+                    </br>
                 </div>
             </div>
         </div>
-
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col">
-                    <h3 class="fw-bold text-uppercase mb-4 border-bottom pb-2">Valores de la Empresa</h3>
-                    <div class="row">
-                        <!-- Valores individuales de la empresa -->
-                        <div class="col-md-4 mb-3">
-                            <i class="fas fa-check-circle fa-2x text-success"></i>
-                            <h4>Calidad y compromiso</h4>
-                            <p>Nos esforzamos en ofrecer electrodomésticos que cumplan con los más altos estándares de calidad, garantizando durabilidad y confiabilidad en cada producto.</p>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <i class="fas fa-users fa-2x text-primary"></i>
-                            <h4>Atención al cliente</h4>
-                            <p>Nos enfocamos en brindar una experiencia de compra personalizada y amigable, donde cada cliente se sienta apoyado y escuchado en sus necesidades.</p>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <i class="fas fa-leaf fa-2x text-light-green"></i>
-                            <h4>Sostenibilidad</h4>
-                            <p>Creemos en el impacto positivo que podemos tener en el medio ambiente, por lo que nos comprometemos a ofrecer productos eficientes y promover un consumo responsable.</p>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <i class="fas fa-lightbulb fa-2x text-warning"></i>
-                            <h4>Innovación</h4>
-                            <p>Nos apasiona la tecnología y buscamos constantemente integrar productos modernos y avanzados que mejoren la vida en el hogar.</p>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <i class="fas fa-shield-alt fa-2x text-blue"></i>
-                            <h4>Responsabilidad</h4>
-                            <p>Operamos de manera ética y transparente, promoviendo prácticas de venta honestas y un trato respetuoso en cada interacción.</p>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <i class="fas fa-heart fa-2x text-red"></i>
-                            <h4>Empatía</h4>
-                            <p>Nos esforzamos en entender y responder a las necesidades de nuestros clientes.</p>
+                    <div class="container">
+                        <h3 class="fw-bold text-uppercase mb-4 border-bottom pb-2">
+                            Valores de la Empresa
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-check-circle fa-2x text-success"></i>
+                                <h4>Calidad y compromiso</h4>
+                                <p>
+                                    Nos esforzamos en ofrecer electrodomésticos que cumplan con
+                                    los más altos estándares de calidad, garantizando
+                                    durabilidad y confiabilidad en cada producto.
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-users fa-2x text-primary"></i>
+                                <h4>Atención al cliente</h4>
+                                <p>
+                                    Nos enfocamos en brindar una experiencia de compra
+                                    personalizada y amigable, donde cada cliente se sienta
+                                    apoyado y escuchado en sus necesidades.
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-leaf fa-2x text-light-green"></i>
+                                <h4>Sostenibilidad</h4>
+                                <p>
+                                    Creemos en el impacto positivo que podemos tener en el medio
+                                    ambiente, por lo que nos comprometemos a ofrecer productos
+                                    eficientes y promover un consumo responsable.
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-lightbulb fa-2x text-warning"></i>
+                                <h4>Innovación</h4>
+                                <p>
+                                    Nos apasiona la tecnología y buscamos constantemente
+                                    integrar productos modernos y avanzados que mejoren la vida
+                                    en el hogar.
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-shield-alt fa-2x text-blue"></i>
+                                <h4>Responsabilidad</h4>
+                                <p>
+                                    Operamos de manera ética y transparente, promoviendo
+                                    prácticas de venta honestas y un trato respetuoso en cada
+                                    interacción.
+                                </p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-heart fa-2x text-red"></i>
+                                <h4>Empatía</h4>
+                                <p>
+                                    Nos esforzamos en entender y responder a las necesidades de
+                                    nuestros clientes.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!--Esta parte sera de los integrantes del grupo-->
+    <div class="row">
+        <div class="col text-center">
+            <h4 class="fw-bold text-uppercase mb-4 border-bottom pb-2">
+                Equipo de Fundadores
+            </h4>
+        </div>
+    </div>
 
-    <section class="team-section">
-        <div class="row">
-            <div class="col text-center">
-                <h4 class="fw-bold text-uppercase mb-4 border-bottom pb-2">Equipo de Fundadores</h4>
+    <!--Tarjetas individuales-->
+    <section class="section-tarjet">
+
+        <!-- Tarjeta de Abril-->
+        <div class="card tarjeta text-center">
+            <div class="card-sup">
+                <div class="item-card-sup"></div>
+                <img
+                        src="{% static 'core/img/abril.jpg' %}"
+                        alt="Abril Lopez"
+                        class="img-te"
+                />
+            </div>
+
+            <p class="card-mail">
+                Correo:
+                <a class="card-mail" href="mailto:showna9555@gmail.com"
+                >showna9555@gmail.com</a
+                >
+            </p>
+            <div class="card-box">
+                <a href="#" class="card-inf">
+                    <div class="card-bg"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Abril Lopez</h5>
+                        <p class="card-text">Fecha de nacimiento: 13/07/2005</p>
+                        <p class="card-text">19 años</p>
+                    </div>
+                </a>
             </div>
         </div>
-        <!-- Tarjetas individuales del equipo -->
-        <div class="section-tarjet d-flex justify-content-around">
-            <div class="card tarjeta text-center">
-                <div class="card-sup">
-                    <img src="{% static 'core/img/abril.jpg' %}" alt="Abril Lopez" class="img-te" />
-                </div>
-                <p class="card-mail">Correo: <a href="mailto:showna9555@gmail.com">showna9555@gmail.com</a></p>
-                <div class="card-box">
-                    <h5 class="card-title">Abril Lopez</h5>
-                    <p class="card-text">Fecha de nacimiento: 13/07/2005</p>
-                    <p class="card-text">19 años</p>
-                </div>
-            </div>
 
-            <div class="card tarjeta text-center">
-                <div class="card-sup">
-                    <img src="{% static 'core/img/ale.jpeg' %}" alt="Alejandro Mercado" class="img-te" />
-                </div>
-                <p class="card-mail">Correo: <a href="mailto:42730179@fi.unju.edu.ar">42730179@fi.unju.edu.ar</a></p>
-                <div class="card-box">
-                    <h5 class="card-title">Alejandro Mercado</h5>
-                    <p class="card-text">Fecha de nacimiento: 13/07/2000</p>
-                    <p class="card-text">24 años</p>
-                </div>
+        <!-- Tarjeta de Alejandro-->
+        <div class="card tarjeta text-center">
+            <div class="card-sup">
+                <div class="item-card-sup"></div>
+                <img
+                        src="{% static 'core/img/ale.jpeg' %}"
+                        alt="Alejandro Mercado"
+                        class="img-te"
+                />
             </div>
-
-            <div class="card tarjeta text-center">
-                <div class="card-sup">
-                    <img src="{% static 'core/img/ornela.jpg' %}" alt="Ornella Salinas" class="img-te" />
-                </div>
-                <p class="card-mail">Correo: <a href="mailto:44125811@fi.unju.edu.ar">44125811@fi.unju.edu.ar</a></p>
-                <div class="card-box">
-                    <h5 class="card-title">Ornella Salinas</h5>
-                    <p class="card-text">Fecha de nacimiento: 13/07/2002</p>
-                    <p class="card-text">22 años</p>
-                </div>
+            <p class="card-mail">
+                Correo:
+                <a class="card-mail" href="mailto:42730179@fi.unju.edu.ar"
+                >42730179@fi.unju.edu.ar</a
+                >
+            </p>
+            <div class="card-box">
+                <a href="#" class="card-inf">
+                    <div class="card-bg"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Alejandro Mercado</h5>
+                        <p class="card-text">Fecha de nacimiento: 13/07/2000</p>
+                        <p class="card-text">24 años</p>
+                    </div>
+                </a>
             </div>
         </div>
+
+        <!-- Tarjeta de Ornela-->
+        <div class="card tarjeta text-center">
+            <div class="card-sup">
+                <div class="item-card-sup"></div>
+                <img
+                        src="{% static 'core/img/ornela.jpg' %}"
+                        alt="Ornella Salinas"
+                        class="img-te"
+                />
+            </div>
+
+            <p class="card-mail">
+                Correo:
+                <a class="card-mail" href="mailto:44125811@fi.unju.edu.ar "
+                >44125811@fi.unju.edu.ar</a
+                >
+            </p>
+            <div class="card-box">
+                <a href="#" class="card-inf">
+                    <div class="card-bg"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ornella Salinas</h5>
+                        <p class="card-text">Fecha de nacimiento: 13/07/2002</p>
+                        <p class="card-text">22 años</p>
+                    </div>
+                </a>
+            </div>
     </section>
 
-    <section class="purpose-section">
-        <div class="container mt-5 mb-5 text-center">
-            <h4 class="fw-bold text-uppercase mb-4 border-bottom pb-2">Propósito del Negocio</h4>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3mFID2IIA-s?si=ZHjo7SRirGAlTn-r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <div class="container mt-5 mb-5">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col text-center">
+                    <h4 class="fw-bold text-uppercase mb-4 border-bottom pb-2">
+                        Propósito del Negocio
+                    </h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3mFID2IIA-s?si=ZHjo7SRirGAlTn-r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!--Aqui termina la parte de los integrantes del grupo-->
 </main>
 {% endblock %}
