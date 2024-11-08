@@ -9,7 +9,7 @@ class ImagenProductoInline(admin.TabularInline):
 
 class ProductoAdmin(admin.ModelAdmin):
     inlines = [ImagenProductoInline]
-    list_display = ('nombre', 'precio', 'disponible')
+    list_display = ('nombre', 'precio', 'disponible','precioAnterior')
     list_filter = ('disponible',)
     search_fields = ('nombre', 'descripcion')
 
