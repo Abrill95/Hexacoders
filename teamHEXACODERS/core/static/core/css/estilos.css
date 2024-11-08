@@ -97,8 +97,22 @@ button i {
   gap: 5px;
   margin: 0 10% 0 20%;
 }
+@media (min-width: 992px) and (max-width: 1200px)  {
 
-@media (max-width: 1000px) {
+  .navbar-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: -35%;
+    padding: 3px 3px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  .navbar-nav .nav-item{
+    width: 100%;
+  }
+
+}
+@media (max-width: 992px) {
   .nav {
     transition: none !important; /* Desactivar todas las transiciones en dispositivos móviles */
     background-color: #333;
@@ -118,7 +132,7 @@ button i {
   }
 
   .nav-search-div {
-    transform: translateY(480%) translateX(-25%);
+    transform: translateY(600%) translateX(-25%);
     width: 80%;
   }
 

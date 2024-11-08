@@ -17,6 +17,7 @@ def contacto(request):
 
 def productos(request):
     productos = Producto.objects.all()
+
     paginator = Paginator(productos, 12)  # Muestra 28 productos por página
 
 # Obteniene el número de página de la solicitud

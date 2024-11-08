@@ -1,11 +1,85 @@
 /* Estilo general de la sección */
-.todos-productos-principal {
-  margin-top: -10%;
-  background-color: #f8f9fa;
+main{
+  margin: 10% 0 0 0;
+  margin-top: 10%;
 }
 
+
+/** -------------- DESCUENTOS Y PROMOCIONES -------------**/
+.carrousel-banner{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.image-banner {
+  width: 90%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.carrousel-banner-item {
+  transition: transform 0.5s ease; /* Transición suave */
+}
+
+.carrousel-banner .carousel-control-prev,
+.carrousel-banner  .carousel-control-next {
+  margin: 0 -8% 0 -8%;
+}
+.carrousel-banner .carousel-control-prev-icon,
+.carrousel-banner  .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .main_banner_bg_desktop {
+    width: 100vw; /* Ajusta el tamaño máximo de la imagen */
+    height: 10vw;
+    margin-top: -5%;
+  }
+  .carrousel-banner .carousel-control-prev,
+  .carrousel-banner  .carousel-control-next {
+    margin: -30% -4% 0 -4%;
+  }
+  .image-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 15%;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .main_banner_bg_desktop {
+    width: 100vw; /* Ajusta el tamaño máximo de la imagen */
+    height: 10vw;
+    margin-top: -5%;
+  }
+
+  .carrousel-banner .carousel-control-prev,
+  .carrousel-banner .carousel-control-next {
+    margin: -10% -4% 0 -4%;
+  }
+
+  .image-banner {
+    width: 90%;
+    height: auto;
+
+  }
+}
+
+
+/** --------SECCION DE PRODUCTOS------**/
+.todos-productos-principal {
+  margin-top: 0%;
+}
 .container {
-  max-width: 1200px;
+  max-width: 80%;
 }
 
 /* Estilos de las tarjetas de productos */
@@ -101,13 +175,46 @@
   width: 100%;
   margin-bottom: 5px;
 }
+.price-content{
+  display: flex;
+  margin-left: 10%;
+  width: 100%;
+}
+.card-pricePrev{
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  display: inline-block;
+}
+.card-descuento{
+  display: block;
+  background-color: #022b5b;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  margin-right: 25%;
+  text-align: center;
+  width: 50%;
+  padding: 2px;
+}
 .card-price {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #453db3;
+  text-align: center;
   margin: 0;
-  margin-top: auto;
+  margin-top: -12%;
+  width: 100%;
 }
+.card-coutas{
+  text-align: center;
+  font-size: 0.9rem;
+  color: green;
+  margin-top: -4%;
+  margin-bottom: -4%;
+  width: 100%;
+}
+
+
 .btn-comprar {
   opacity: 0;
   width: 100%;
@@ -146,7 +253,7 @@
   height: 400px; /* Ajusta la altura deseada */
 }
 
-.carousel-item img {
+.todos-productos-principal  .carousel-item img {
   width: 100%;
   height: auto;
   max-height: 400px;
@@ -154,45 +261,70 @@
   transition: transform 0.6s ease;
 }
 
-.carousel-item:hover img {
+.todos-productos-principal .carousel-item:hover img {
   transform: scale(1.1);
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.todos-productos-principal .carousel-control-prev,
+.todos-productos-principal .carousel-control-next {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: white;
-  border-radius: 50%;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
+.todos-productos-principal .carousel-control-prev:hover,
+.todos-productos-principal .carousel-control-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 20px;
-  height: 20px;
-}
 
 /* Estilo de paginación */
 .pagination {
   margin: 20px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .todos-productos-principal {
+    margin-top: -40%;
+  }
+  .container {
+    max-width: 70%;
+  }
   .btn-comprar {
     opacity: 1;
     width: 100%;
     height: 10%;
     transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 720px) {
+  .todos-productos-principal {
+    margin-top: -10%;
+  }
+
+  .container {
+    max-width: 90%;
+
+  }
+  .card-descuento {
+font-size: 0.7rem;
+    width: 40%;
+  }
+  }
+
+@media (max-width: 1200px) {
+  .todos-productos-principal {
+    margin-top: -15%;
+  }
+
+  .container {
+    max-width: 85%;
   }
 }
