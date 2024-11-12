@@ -1,0 +1,282 @@
+[
+{
+  "model": "ventas.producto",
+  "pk": 1,
+  "fields": {
+    "codigo": "23423",
+    "nombre": "Refrigerador Samsung",
+    "descripcion": "Capacidad de 380 litros, tecnología de enfriamiento rápido y función de ahorro energético.",
+    "precioAnterior": "1350000.00",
+    "precio": "700000.00",
+    "disponible": true,
+    "cantidad": 16,
+    "imagen_principal": "productos/refrigerador_GRUoqQL.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 2,
+  "fields": {
+    "codigo": "235235",
+    "nombre": "Lavadora LG",
+    "descripcion": "Tecnología TurboWash y conexión Wi-Fi para control remoto.",
+    "precioAnterior": "900000.00",
+    "precio": "600000.00",
+    "disponible": true,
+    "cantidad": 9,
+    "imagen_principal": "productos/lavadora_fDFvpbu.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 3,
+  "fields": {
+    "codigo": "234244",
+    "nombre": "Microondas Panasonic",
+    "descripcion": "Tecnología Inverter, ideal para cocción uniforme.",
+    "precioAnterior": "390000.00",
+    "precio": "250000.00",
+    "disponible": true,
+    "cantidad": 12,
+    "imagen_principal": "productos/microondas_aGDET9S.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 4,
+  "fields": {
+    "codigo": "4342354",
+    "nombre": "Estufa a Gas Whirlpool",
+    "descripcion": "Estufa a gas de 5 quemadores, con horno autolimpiante y temporizador digital.",
+    "precioAnterior": "870000.00",
+    "precio": "550000.00",
+    "disponible": true,
+    "cantidad": 13,
+    "imagen_principal": "productos/estufa_R09PeZx.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 5,
+  "fields": {
+    "codigo": "5489",
+    "nombre": "Aspiradora Dyson",
+    "descripcion": "Inalámbrica, con succión potente y autonomía de hasta 60 minutos.",
+    "precioAnterior": "120000.00",
+    "precio": "70000.00",
+    "disponible": true,
+    "cantidad": 7,
+    "imagen_principal": "productos/aspiradora_Z4SJBTG.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 6,
+  "fields": {
+    "codigo": "532532",
+    "nombre": "Cafetera Nespresso",
+    "descripcion": "Automática y con sistema de extracción de última generación.",
+    "precioAnterior": "340000.00",
+    "precio": "200000.00",
+    "disponible": true,
+    "cantidad": 11,
+    "imagen_principal": "productos/cafetera_QxKlYLS.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 7,
+  "fields": {
+    "codigo": "96657",
+    "nombre": "Batidora KitchenAid",
+    "descripcion": "10 velocidades, con tazón de acero inoxidable.",
+    "precioAnterior": "70000.00",
+    "precio": "40000.00",
+    "disponible": true,
+    "cantidad": 20,
+    "imagen_principal": "productos/batidora_vmpYT1P.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 8,
+  "fields": {
+    "codigo": "13324",
+    "nombre": "Freidora de Aire Philips",
+    "descripcion": "Freidora de aire de 1.4 kg, tecnología Rapid Air para cocinar sin aceite.",
+    "precioAnterior": "470000.00",
+    "precio": "300000.00",
+    "disponible": true,
+    "cantidad": 18,
+    "imagen_principal": "productos/freidora_CFmU4bT.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 9,
+  "fields": {
+    "codigo": "43322",
+    "nombre": "Plancha de Vapor Rowenta",
+    "descripcion": "Potencia de 1700 W, con suela de acero inoxidable y sistema antical.",
+    "precioAnterior": "150000.00",
+    "precio": "80000.00",
+    "disponible": true,
+    "cantidad": 12,
+    "imagen_principal": "productos/planchavapor_xpA2LMW.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 10,
+  "fields": {
+    "codigo": "9758346",
+    "nombre": "Máquina para Hacer Hielo Igloo",
+    "descripcion": "Produce hasta 12 kg de hielo en 24 horas, con pantalla digital y función de autolimpieza.",
+    "precioAnterior": "180000.00",
+    "precio": "130000.00",
+    "disponible": true,
+    "cantidad": 14,
+    "imagen_principal": "productos/hielera_RIUKDzs.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 11,
+  "fields": {
+    "codigo": "86764",
+    "nombre": "Robot Aspirador Roomba",
+    "descripcion": "Aspirador Inteligente con conectividad Wi-Fi y control mediante app móvil.",
+    "precioAnterior": "420000.00",
+    "precio": "350000.00",
+    "disponible": true,
+    "cantidad": 23,
+    "imagen_principal": "productos/robot_rMJPX3o.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 12,
+  "fields": {
+    "codigo": "43422",
+    "nombre": "Máquina de Hacer Pan Cuisinart",
+    "descripcion": "Incluye 12 programas preestablecidos y opción de hornear sin gluten.",
+    "precioAnterior": "200000.00",
+    "precio": "120000.00",
+    "disponible": true,
+    "cantidad": 21,
+    "imagen_principal": "productos/pan_vbzHNXM.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 13,
+  "fields": {
+    "codigo": "76546578",
+    "nombre": "Tostadora Breville",
+    "descripcion": "Tostadora de 2 rebanadas con función de levantamiento y un control de dorado preciso.",
+    "precioAnterior": "210000.00",
+    "precio": "150000.00",
+    "disponible": true,
+    "cantidad": 11,
+    "imagen_principal": "productos/tostadora_GrW2mD0.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 14,
+  "fields": {
+    "codigo": "658477",
+    "nombre": "Hervidor Eléctrico Hamilton Beach",
+    "descripcion": "Capacidad de 1.7 litros, con apagado automático y base giratoria.",
+    "precioAnterior": "380000.00",
+    "precio": "3000000.00",
+    "disponible": true,
+    "cantidad": 14,
+    "imagen_principal": "productos/hervidor_Jdycuxs.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 15,
+  "fields": {
+    "codigo": "867587",
+    "nombre": "Envasador m-73 Black+Decker",
+    "descripcion": "Sistema de envasado al vacío para conservar alimentos, con sellado automático y función de marinado.",
+    "precioAnterior": "300000.00",
+    "precio": "180000.00",
+    "disponible": true,
+    "cantidad": 7,
+    "imagen_principal": "productos/envasadora_1mlMsf3.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 16,
+  "fields": {
+    "codigo": "1122341",
+    "nombre": "Freidora de Aire COSORI",
+    "descripcion": "Pantalla táctil con 5.8 cuartos y 11 configuraciones preestablecidas.",
+    "precioAnterior": "200000.00",
+    "precio": "120000.00",
+    "disponible": true,
+    "cantidad": 5,
+    "imagen_principal": "productos/freidora_dMQta2m.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 17,
+  "fields": {
+    "codigo": "45645",
+    "nombre": "Calefactor Eléctrico Lasko",
+    "descripcion": "Calefactor portátil de cerámica con termostato y 3 configuraciones de calor.",
+    "precioAnterior": "850000.00",
+    "precio": "70000.00",
+    "disponible": true,
+    "cantidad": 22,
+    "imagen_principal": "productos/calefactor_vrOVe0r.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 18,
+  "fields": {
+    "codigo": "65433",
+    "nombre": "PAVA ELÉCTRICA INFUSTYLE",
+    "descripcion": "Capacidad 1,7 litros. · Cuerpo de acero inoxidable, selector de temperatura.· Potencia: 2.000 watts.",
+    "precioAnterior": "80000.00",
+    "precio": "45000.00",
+    "disponible": true,
+    "cantidad": 12,
+    "imagen_principal": "productos/pava1_OOXEstd.jpg"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 19,
+  "fields": {
+    "codigo": "7654332",
+    "nombre": "Horno Electrico Liliana Ao200",
+    "descripcion": "Modelo AO200, capacidad de 20 litros con función timer incorporada. Patas antideslizantes.",
+    "precioAnterior": "130000.00",
+    "precio": "75000.00",
+    "disponible": true,
+    "cantidad": 16,
+    "imagen_principal": "productos/m1_pD6bb3p.webp"
+  }
+},
+{
+  "model": "ventas.producto",
+  "pk": 20,
+  "fields": {
+    "codigo": "55354",
+    "nombre": "Licuadora Oster",
+    "descripcion": "Licuadora portátil de 20 onzas, ideal para smoothies y batidos, con diseño ergonómico.",
+    "precioAnterior": "75000.00",
+    "precio": "50000.00",
+    "disponible": true,
+    "cantidad": 18,
+    "imagen_principal": "productos/licuadora_BhsV3ST.webp"
+  }
+}
+]
