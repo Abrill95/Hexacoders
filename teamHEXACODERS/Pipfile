@@ -10,12 +10,12 @@ Pillow = "*"
 pylint = "*"
 pylint-django = "*"
 pylint-celery = "*"
+tzdata = "*"
 
 [requires]
 python_version = "3.12"
 
-
 [scripts]
 run = "python manage.py runserver"
 
-
+[dev-packages]

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Producto, ImagenProducto
+from .models import Cliente, Proveedor, Producto, ImagenProducto, Venta
 
 
 
@@ -14,5 +14,7 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ('disponible',)
     search_fields = ('nombre', 'descripcion')
 
-
+admin.site.register(Cliente)
+admin.site.register(Proveedor)
 admin.site.register(Producto, ProductoAdmin)
+admin.site.register(Venta)
