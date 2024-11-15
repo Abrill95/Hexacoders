@@ -92,7 +92,7 @@ h1, h2 {
   max-width: 60%;
   top: 20%;
   left: 50%;
-  transform: translateX(-50%); /* Centra horizontalmente */
+  transform: translateX(-50%);
   z-index: 500;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -112,7 +112,7 @@ h1, h2 {
   50% { transform: translateX(-50%) scale(1.05); }
 }
 
-/* Clases para aplicar las animaciones */
+
 .fadeIn {
   animation: fadeIn 0.6s ease forwards;
 }
