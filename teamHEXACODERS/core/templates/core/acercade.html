@@ -18,6 +18,26 @@
 
 </li>
 {% endblock %}
+
+{% block title-pag %}
+SOBRE NOSOTROS
+{% endblock %}
+
+{% block buttons %}
+<a href="#historia" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
+><span> Nuestra historia
+    <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
+<a href="#equipo" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
+    <span>Nuestro equipo<i class="ri-arrow-right-line align-middle fw-bold"></i>
+    </span></a>
+{% endblock %}
+
+{% block image-banner %}
+<div class="bg-img-cover animation-move bg-pos-center-center"
+     style="background-image: url(https://media.licdn.com/dms/image/v2/C4E1BAQFAX0CpC7mnew/company-background_10000/company-background_10000/0/1584319529701/facultad_de_ingenieria_unju_cover?e=2147483647&v=beta&t=B30SB46xfrLw2PNDe3R8_7kKy8Fl0rsWoAo5bah7gy4)"
+></div> 
+
+{% endblock %}
 {% block content %}
 <main class="container-acercade my-5">
     <section  class="info">
@@ -137,7 +157,7 @@
     </div>
 
     <!--Tarjetas individuales-->
-    <section class="section-tarjet">
+    <section class="section-tarjet" id="equipo">
 
         <!-- Tarjeta de Abril-->
         <div class="card tarjeta text-center">
@@ -161,7 +181,7 @@
                     <div class="card-bg"></div>
                     <div class="card-body">
                         <h5 class="card-title">Abril Lopez</h5>
-                        <p class="card-text">Fecha de nacimiento: 13/07/2005</p>
+                        <p class="card-text">Fecha de nacimiento: 14/03/2005</p>
                         <p class="card-text">19 años</p>
                     </div>
                 </a>
