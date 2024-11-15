@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="{% static 'core/css/estilosContacto.css' %}" />
 {% endblock %}
 
+<!--Links de la barra de navegación-->
 {% block nav %}
 <li class="nav-item">
   <a href="{% url 'home' %}" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+  <a href="{% url 'contacto' %}" class="nav-link active">Contacto</a>
 </li>
 <li class="nav-item">
   <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
@@ -16,6 +20,28 @@
 <li class="nav-item">
     <a href="{% url 'ventas:productos' %}" class="nav-link">Productos</a>
 </li>
+{% endblock %}
+
+<!--Titulo del hero-->
+{% block title-pag %}
+CONTACTO
+{% endblock %}
+
+<!--Zona de botones del banner/hero-->
+{% block buttons %}
+<a href="#formulario" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
+><span> FORMULARIO
+    <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
+<a href="#mapa" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
+    <span>NUESTRA UBICACION<i class="ri-arrow-right-line align-middle fw-bold"></i>
+    </span></a>
+{% endblock %}
+
+<!--Background del banner/hero -->
+{% block image-banner %}
+<div class="bg-img-cover animation-move bg-pos-center-center"
+     style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/Jujuy%2C_energ%C3%ADa_viva.jpg)"
+></div>
 {% endblock %}
 
 {% block content %}
@@ -60,11 +86,9 @@
   </div>
 </main>
 
-<!-- Bootstrap CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block script %}
-
+<!-- Bootstrap CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 {% endblock %}

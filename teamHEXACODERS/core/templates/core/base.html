@@ -22,14 +22,18 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}" />
+    <!-- Swiper CSS (para el carrusel avanzado ) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Animate CSS (para animaciones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}"/>
     {% block css %}{% endblock %}
   </head>
 
   <body>
     <!-- Barra de navegación -->
     <header>
-      <nav class="navbar navbar-expand-lg  navbar-dark navbar">
+      <nav id="navbar" class="navbar navbar-expand-lg  navbar-dark navbar">
         <div class="container-fluid">
           <!--Logo de la App-->
           <a href="{% url 'home' %}" class="logo">
@@ -41,48 +45,56 @@
           </a>
 
           <!-- Botón menú (oculto)-->
-          <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon white-icon"></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon white-icon"></span>
           </button>
-          <div
-                  class="collapse navbar-collapse text-white"
-                  id="navbarSupportedContent"
-          >
-            <!--Barra de búsqueda-->
-            <form class="d-flex nav-search-div" role="search">
-              <input
-                      class="input me-2"
-                      type="text"
-                      placeholder="Buscar"
-                      aria-label="Search"
-              />
+          <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+             {% block barra-busqueda %}{% endblock %}
+             <!-- Links de Navegación -->
+             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                 {% block nav %} {% endblock %}
 
-              <button class="boton-search">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-
-            <!-- Links de Navegación -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              {% block nav %} {% endblock %}
-
-            </ul>
+             </ul>
           </div>
         </div>
       </nav>
     </header>
+    <!-- Hero Section -->
+    {% block hero %}
+    <section class="bg-overlay-k">
+        <div class="container-hero ">
+            <div class="justify-content-center  h-100 position-relative  text-white ">
+                <div>
+                    <h1 class="fw-bold px-2 px-md5 text-center mx-auto mt-md-0 animate__animated animate__backInLeft display-1 " data-aos-delay="1000">
+                        {% block title-pag %} {% endblock %} </h1>
+                    <div data-aos="fade-in" data-aos-delay="2000">
+                        <div class="d-md-flex justify-content-center mt-4 my-md-5 mb-5 ">
+                            {% block buttons %} {% endblock %}
+                        </div>
+                        <i class="ri-mouse-line d-block text-center animation-float ri-2x transition-all opacity-50-hover text-white" data-pixr-scrollto data-target=".brand-section" data-aos="fade-up" data-aos-delay="700"></i>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="position-absolute z-index-1 top-0 bottom-0 start-0 end-0">
+           <!-- Swiper Info -->
+           <div class="swiper-container overflow-hidden bg-light w-100 h-100">
+               <div class="swiper-wrapper">
+                   <div class="swiper-slide position-relative">
+                       {% block image-banner %} {% endblock %}
+                   </div>
+               </div>
+           </div>
+           <!-- / Swiper Info-->
+       </div>
+   </section>
+   <!--/ Hero Section-->
+   {% endblock %}
 
-    <!-- Contenido principal -->
 
-      {% block content %}{% endblock %}
+<!-- Contenido principal -->
+{% block content %}{% endblock %}
+   
 
     <!--Footer-->
     <footer class="text-white text-center footer-container bg-footer">
@@ -146,14 +158,14 @@
         © 2024 Copyright Fi Unju:
       </div>
     </footer>
-
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'core/javascript/script.js' %}"></script>
     {% block script %}{% endblock %}
+    
 
   </body>
 </html>

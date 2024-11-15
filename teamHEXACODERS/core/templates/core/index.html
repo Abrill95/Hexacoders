@@ -3,42 +3,50 @@
 {% load static %}
 {% block title %} Home{% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/estilosIndex.css' %}" />
+{% endblock %}
+
 {% block nav %}
+<li class="nav-item active">
+    <a href="{% url 'home' %}" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'contacto' %}" class="nav-link ">Contacto</a>
+</li>
 <li class="nav-item">
     <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
 </li>
 <li class="nav-item">
-    <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
-</li>
-<li class="nav-item">
-    <a href="{% url 'ventas:productos' %}" class="nav-link">Productos</a>
-
+    <a href="{% url 'productos' %}" class="nav-link ">Productos</a>
 </li>
 {% endblock %}
+
+<!--Para quitar el banner/hero-->
+{% block hero %}{% endblock %}
 
 
 {% block content %}
-<main>
-    <section id="home">
-        <h1>SML</h1>
-        <p>
-            Nuestro sitio web tiene como objetivo ofrecer a los clientes una
-            experiencia de compra cómoda, segura y confiable para adquirir
-            electrodomésticos de alta calidad. Buscamos simplificar el proceso de
-            selección con descripciones detalladas, opiniones de usuarios y
-            asesoramiento profesional en línea, ayudando a los clientes a tomar
-            decisiones informadas. Además, el sitio está diseñado para ofrecer
-            promociones exclusivas y opciones de envío rápido, brindando a
-            nuestros clientes soluciones eficientes y adaptadas a sus necesidades
-            del hogar.
-        </p>
-    </section>
-</main>
-{% endblock %}
+<section class="parallax">
 
-{% block extra_js %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <img src="{% static 'core/img/hill1.png' %}" id="hill1" alt="">
+    <img src="{% static 'core/img/hill2.png' %}" id="hill2" alt="">
+    <img src="{% static 'core/img/hill3.png' %}" id="hill3" alt="">
+    <img src="{% static 'core/img/hill4.png' %}" id="hill4" alt="">
+    <img src="{% static 'core/img/hill5.png' %}" id="hill5" alt="">
+    <img src="{% static 'core/img/tree.png' %}" id="tree" alt="">
+    <h2 id="text">¡BIENVENIDOS! </h2>
+    <img src="{% static 'core/img/leaf.png' %}" id="leaf" alt="">
+    <img src="{% static 'core/img/plant.png' %}" id="plant" alt="">
+</section >
+<section class="sec">
+    <h2>SOMOS SL</h2>
+    <p> Nuestro sitio web tiene como objetivo ofrecer a los clientes una experiencia de compra cómoda, segura y confiable para adquirir electrodomésticos de alta calidad. Buscamos simplificar el proceso de selección con descripciones detalladas, opiniones de usuarios y asesoramiento profesional en línea, ayudando a los clientes a tomar decisiones informadas. Además, el sitio está diseñado para ofrecer promociones exclusivas y opciones de envío rápido, brindando a nuestros clientes soluciones eficientes y adaptadas a sus necesidades del hogar.
+        </br></br>
+        Nos esforzamos por crear una plataforma accesible y fácil de navegar, donde los clientes puedan explorar una amplia gama de productos y comparar sus características y beneficios en un solo lugar. Nuestro sitio no solo presenta electrodomésticos de última tecnología, sino que también brinda recomendaciones personalizadas según las preferencias y el estilo de vida de cada usuario. Con un enfoque en la innovación, constantemente actualizamos nuestro catálogo para incluir productos que simplifiquen las tareas cotidianas y mejoren la calidad de vida en el hogar.
+        </br></br>
+        Además, valoramos la relación con nuestros clientes y priorizamos la transparencia en cada transacción. Para ello, ofrecemos un sistema de atención al cliente en tiempo real que responde a cualquier consulta y proporciona apoyo durante todo el proceso de compra. Desde el momento en que el cliente selecciona un producto hasta la entrega final, nuestro compromiso es asegurar que cada paso se realice de forma fluida y sin complicaciones.
+
+    </p>
+</section>
 {% endblock %}
