@@ -16,12 +16,12 @@ def productos(request):
 
 def listar_clientes(request):
     clientes = Cliente.objects.all()
-    return render(request, 'ventas/lista_clientes.html', {'clientes': clientes})
+    return render(request, 'lista_clientes.html', {'clientes': clientes})
 
 def listar_proveedores(request):
     proveedores = Proveedor.objects.all()
-    return render(request, 'ventas/lista_proveedores.html', {'proveedores': proveedores})
+    return render(request, 'lista_proveedores.html', {'proveedores': proveedores})
 
 def listar_ventas(request):
     ventas = Venta.objects.all()
-    return render(request, 'ventas/lista_ventas.html', {'ventas': ventas})
+    return render(request, 'lista_ventas.html', {'ventas': ventas})

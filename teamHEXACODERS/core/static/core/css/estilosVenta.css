@@ -1,0 +1,27 @@
+.card-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table-hover tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+}

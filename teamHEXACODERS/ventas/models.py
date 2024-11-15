@@ -38,8 +38,7 @@ class ImagenProducto(models.Model):
         Producto, on_delete=models.CASCADE, related_name='imagenes')
     imagen = models.ImageField(upload_to='productos/galeria/')
 
-
-    def __str__(self):
+def __str__(self):
         return self.nombre
 
 class Cliente(models.Model):

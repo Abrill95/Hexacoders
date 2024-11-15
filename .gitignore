@@ -126,3 +126,5 @@ dmypy.json
 
 # Mac Os
 .DS_Store
+
+teamHEXACODERS/db.sqlite3
