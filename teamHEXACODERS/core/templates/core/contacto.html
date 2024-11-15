@@ -6,92 +6,61 @@
 <link rel="stylesheet" href="{% static 'core/css/estilosContacto.css' %}" />
 {% endblock %}
 
-<!--Links de la barra de navegación-->
 {% block nav %}
 <li class="nav-item">
-  <a href="{% url 'home' %}" class="nav-link">Home</a>
+    <a href="{% url 'home' %}" class="nav-link">Home</a>
 </li>
 <li class="nav-item">
-  <a href="{% url 'contacto' %}" class="nav-link active">Contacto</a>
-</li>
-<li class="nav-item">
-  <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
+    <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
 </li>
 <li class="nav-item">
     <a href="{% url 'ventas:productos' %}" class="nav-link">Productos</a>
+
 </li>
-<li class="nav-item">
-    <a href="{% url 'ventas:ventas' %}" class="nav-link ">Ventas</a>
-</li>
-{% endblock %}
-
-<!--Titulo del hero-->
-{% block title-pag %}
-CONTACTO
-{% endblock %}
-
-<!--Zona de botones del banner/hero-->
-{% block buttons %}
-<a href="#formulario" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
-><span> FORMULARIO
-    <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
-<a href="#mapa" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
-    <span>NUESTRA UBICACION<i class="ri-arrow-right-line align-middle fw-bold"></i>
-    </span></a>
-{% endblock %}
-
-<!--Background del banner/hero -->
-{% block image-banner %}
-<div class="bg-img-cover animation-move bg-pos-center-center"
-     style="background-image: url('{% static "core/img/banner2.jpg" %}')"
-></div>
 {% endblock %}
 
 {% block content %}
 <main class="contact-section py-5">
-  <h1 class="text-center mb-5" style="font-size: 2.5em; color: #495057; font-family: 'Poppins', sans-serif;">TEAM HEXACODERS</h1>
-
-  <div class="container col-lg-6 col-md-8 col-sm-10 mx-auto main-container shadow p-5" style="border-radius: 8px; background-color: #f9f9f9;">
-    <h2 class="text-center mb-4" style="color: #17a2b8; font-family: 'Poppins', sans-serif;">Formulario de Contacto</h2>
-      
-      <!-- Mensaje de confirmación -->
-      <div class="confirmation-message" id="confirmationMessage">
-          ¡Formulario enviado exitosamente!
-      </div>
-    <form id="contactForm">
-      <div class="mb-4">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
-      </div>
-      <div class="mb-4">
-        <label for="email" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
-      </div>
-      <div class="mb-4">
-        <label for="telefono" class="form-label">Teléfono</label>
-        <input type="tel" class="form-control" id="telefono" placeholder="123-456-7890" required>
-      </div>
-      <div class="mb-4">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary w-100 btn-lg">Enviar</button>
-    </form>
-  </div>
-
-  <!-- Google Maps Embed -->
-  <div class="d-flex justify-content-center my-5">
-    <div class="col-lg-8 col-md-10 col-sm-12 p-4" style="width: 150%; margin-left: 50%">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1819.7598401945156!2d-65.2936567!3d-24.1885724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1731090544846!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+    <h1 class="text-center mb-5" style="font-size: 2.5em; color: #495057; font-family: 'Poppins', sans-serif;">TEAM HEXACODERS</h1>
+    
+    <div class="container col-lg-6 col-md-8 col-sm-10 mx-auto main-container shadow p-5" style="border-radius: 8px; background-color: #f9f9f9;">
+        <h2 class="text-center mb-4" style="color: #17a2b8; font-family: 'Poppins', sans-serif;">Formulario de Contacto</h2>
+        
+        <form>
+            <div class="mb-4">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="mb-4">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="123-456-7890" required>
+            </div>
+            <div class="mb-4">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 btn-lg">Enviar</button>
+        </form>
     </div>
-  </div>
+    
+    <!-- Google Maps Embed -->
+    <div class="d-flex justify-content-center my-5">
+        <div class="col-lg-8 col-md-10 col-sm-12 p-4" style="width: 150%; margin-left: 50%">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1819.7598401945156!2d-65.2936567!3d-24.1885724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1731090544846!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
 </main>
 
+<!-- Bootstrap CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block script %}
-<!-- Bootstrap CSS -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 {% endblock %}
