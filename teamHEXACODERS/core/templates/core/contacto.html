@@ -25,8 +25,12 @@
 
   <div class="container col-lg-6 col-md-8 col-sm-10 mx-auto main-container shadow p-5" style="border-radius: 8px; background-color: #f9f9f9;">
     <h2 class="text-center mb-4" style="color: #17a2b8; font-family: 'Poppins', sans-serif;">Formulario de Contacto</h2>
-
-    <form>
+      
+      <!-- Mensaje de confirmación -->
+      <div class="confirmation-message" id="confirmationMessage">
+          ¡Formulario enviado exitosamente!
+      </div>
+    <form id="contactForm">
       <div class="mb-4">
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>

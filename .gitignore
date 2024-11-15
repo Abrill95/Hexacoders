@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+teamHEXACODERS/db.sqlite3
+
 # C extensions
 *.so
 
