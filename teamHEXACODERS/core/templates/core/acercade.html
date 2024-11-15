@@ -17,6 +17,9 @@
     <a href="{% url 'ventas:productos' %}" class="nav-link">Productos</a>
 
 </li>
+<li class="nav-item">
+    <a href="{% url 'ventas:ventas' %}" class="nav-link ">Ventas</a>
+</li>
 {% endblock %}
 
 {% block title-pag %}
@@ -34,8 +37,7 @@ SOBRE NOSOTROS
 
 {% block image-banner %}
 <div class="bg-img-cover animation-move bg-pos-center-center"
-     style="background-image: url(https://media.licdn.com/dms/image/v2/C4E1BAQFAX0CpC7mnew/company-background_10000/company-background_10000/0/1584319529701/facultad_de_ingenieria_unju_cover?e=2147483647&v=beta&t=B30SB46xfrLw2PNDe3R8_7kKy8Fl0rsWoAo5bah7gy4)"
-></div> 
+     style="background-image: url('{% static "core/img/banner1.jpeg" %}')"></div>
 
 {% endblock %}
 {% block content %}

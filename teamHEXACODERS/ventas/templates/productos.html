@@ -20,6 +20,27 @@
 </li>
 {% endblock %}
 
+
+
+<!--Titulo del hero-->
+{% block title-pag %}
+PRODUCTOS
+{% endblock %}
+
+<!--Zona de botones del banner/hero-->
+{% block buttons %}
+<a href="#formulario" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
+><span> TENDENCIAS
+    <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
+<a href="#disponibles" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
+    <span>DISPONIBLE<i class="ri-arrow-right-line align-middle fw-bold"></i>
+    </span></a>
+{% endblock %}
+{% block image-banner %}
+<div class="bg-img-cover animation-move bg-pos-center-center"
+     style="background-image: url('{% static "core/img/banner3.jpg" %}')"
+></div>
+{% endblock %}
 {% block content %}
 <main>
 
@@ -92,7 +113,7 @@
     </div>
   </div>
 
-  <section class="py-5 todos-productos-principal">
+  <section class="py-5 todos-productos-principal" id="disponibles">
     <h1 class="text-center mb-4 card-title fs-1">Productos Disponibles</h1>
     <div class="container">
       <div class="row   justify-content-center">
