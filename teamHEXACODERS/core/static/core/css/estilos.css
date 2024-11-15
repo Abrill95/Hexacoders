@@ -457,8 +457,8 @@ footer ul li {
 
 
 #historia{
-  padding-top: 100px;
-  margin-top: -100px;
+  padding-top: 80px;
+  margin-top: -80px;
 }
 #equipo{
   padding-top: 220px;
@@ -467,4 +467,13 @@ footer ul li {
 #mapa{
   padding-top: 130px !important;
   margin-top: -130px !important;
+}
+#formulario{
+  padding-top: 200px !important;
+  margin-top: -200px !important;
+}
+
+#disponibles{
+  padding-top: 100px !important;
+
 }

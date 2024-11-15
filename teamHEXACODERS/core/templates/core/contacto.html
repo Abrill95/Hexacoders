@@ -19,6 +19,24 @@
 </li>
 {% endblock %}
 
+{% block title-pag %}
+CONTACTOS
+{% endblock %}
+
+{% block buttons %}
+<a href="#formulario" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
+><span> FORMULARIO
+    <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
+<a href="#mapa" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
+    <span>UBICACION<i class="ri-arrow-right-line align-middle fw-bold"></i>
+    </span></a>
+{% endblock %}
+
+{% block image-banner %}
+<div class="bg-img-cover animation-move bg-pos-center-center"
+     style="background-image: url('{% static "core/img/banner2.jpg" %}')"></div>
+
+{% endblock %}
 {% block content %}
 <main class="contact-section py-5">
     <h1 class="text-center mb-5" style="font-size: 2.5em; color: #495057; font-family: 'Poppins', sans-serif;">TEAM HEXACODERS</h1>
@@ -26,7 +44,11 @@
     <div class="container col-lg-6 col-md-8 col-sm-10 mx-auto main-container shadow p-5" style="border-radius: 8px; background-color: #f9f9f9;">
         <h2 class="text-center mb-4" style="color: #17a2b8; font-family: 'Poppins', sans-serif;">Formulario de Contacto</h2>
         
-        <form>
+        <!-- Mensaje de confirmación -->
+        <div class="confirmation-message" id="confirmationMessage">
+            ¡Formulario enviado exitosamente!
+        </div>
+        <form id="formulario">
             <div class="mb-4">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
@@ -56,6 +78,7 @@
         </div>
     </div>
 </main>
+
 
 <!-- Bootstrap CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
