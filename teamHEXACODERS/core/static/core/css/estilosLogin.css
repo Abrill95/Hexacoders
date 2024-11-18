@@ -1,0 +1,30 @@
+.cascading-right {
+    margin-right: -50px;
+}
+
+.login{
+    margin: 10% 0 10% 15%;
+    border-radius: 5%;
+    width: 70%;
+    height:auto;
+}
+.fw-bold{
+    font-size: 3rem;
+}
+.form-login{
+    margin: 15% 0 0 0;
+}
+.form-control{
+    width: 60%;
+    margin-left: 20%;
+}
+body{
+    background-color: rgb(54, 89, 84) !important;
+}
+
+
+@media (max-width: 992px) {
+    .cascading-right {
+        margin-right: 0;
+    }
+}

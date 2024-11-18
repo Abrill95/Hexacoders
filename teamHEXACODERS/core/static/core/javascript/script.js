@@ -1,3 +1,5 @@
+
+/** Controlador de scrolling de la barra de navegación  **/
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", function () {
@@ -10,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
+/** Movimiento de elementos en el home  **/
 let text = document.getElementById('text');
 let leaf = document.getElementById('leaf');
 let hill1 = document.getElementById('hill1');
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 });
 
-
+/** Controlador de eventos en el formulario de cotactos**/
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formulario");
     const confirmationMessage = document.getElementById("confirmationMessage");
@@ -49,17 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Escuchar el evento de envío del formulario
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-
-
         confirmationMessage.style.display = "block";
         confirmationMessage.classList.add("fadeIn");
-
 
         setTimeout(function () {
             confirmationMessage.classList.remove("fadeIn");
             confirmationMessage.classList.add("heartbeat");
         }, 600);
-
 
         setTimeout(function () {
             confirmationMessage.classList.remove("heartbeat");
@@ -74,3 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2500);
     });
 });
+
+/** Controlador de cartel de alerta para funciones de la página aún no disponibles**/
+function mostrarMensaje() {
+    const toast = document.getElementById('mensaje');
+    toast.style.display = 'block';
+    const bootstrapToast = new bootstrap.Toast(toast);
+    bootstrapToast.show();
+}

@@ -17,10 +17,7 @@ header{
     box-shadow: none !important;
 }
 
-.navigation a:hover, .navigation a.active{
-    background-color: #359381;
-    color: #fff;
-}
+
 
 .parallax{
     position: relative;

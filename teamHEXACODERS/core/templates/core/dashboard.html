@@ -1,0 +1,126 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/estilosDashboard.css' %}" />
+{% endblock %}
+
+{% block nav %}
+<li class="nav-item ">
+    <a href="{% url 'home' %}" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'contacto' %}" class="nav-link ">Contacto</a>
+</li>
+<li class="nav-item ">
+    <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'ventas:productos' %}" class="nav-link ">Productos</a>
+</li>
+<li class="nav-item active">
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn-sesion nav-link">Cerrar sesión</button>
+    </form>
+</li>
+
+{% endblock %}
+{% block login %}
+{% endblock %}
+{% block title-pag %}
+PANEL DE VISTAS
+{% endblock %}
+{% block image-banner %}
+<div class="bg-img-cover animation-move bg-pos-center-center"
+     style="background-image: url(https://i.pinimg.com/originals/93/3b/c7/933bc7abd85928b279999556e8e45940.jpg)"></div>
+
+{% endblock %}
+{% block content %}
+
+<section class="section-tarjet" >
+    <!-- Tarjeta de proveedores-->
+    <div class="card tarjeta text-center">
+        <div class="card-sup">
+            <div class="item-card-sup"></div>
+            <img
+                    src="https://numdea.com/wp-content/uploads/2020/01/en-que-consisten-proveedores.jpg"
+                    alt="Proveedores"
+                    class="img-te"
+            />
+        </div>
+
+        <div class="card-box">
+            <a href="{% url 'ventas:proveedores' %}" class="card-inf">
+                <div class="card-bg"></div>
+                <div class="card-body">
+                <p>PROVEEDORES</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Tarjeta de Clientes-->
+    <div class="card tarjeta text-center">
+        <div class="card-sup">
+            <div class="item-card-sup"></div>
+            <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlqy3ShfzmdyAbMa4BCopIhgDN8EVNGhG8Ag&s"
+                    alt="Clientes"
+                    class="img-te"
+            />
+        </div>
+        
+        <div class="card-box">
+            <a href="{% url 'ventas:clientes' %}"  class="card-inf">
+                <div class="card-bg"></div>
+                <div class="card-body">
+                    <p>CLIENTES</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Tarjeta de Productos-->
+    <div class="card tarjeta text-center">
+        <div class="card-sup">
+            <div class="item-card-sup"></div>
+            <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt-b1tGFOL72JfcgoX0GABvwby_NO7G7yRjA&s"
+                    alt="Productos"
+                    class="img-te"
+            />
+        </div>
+        
+        <div class="card-box">
+            <a href="{% url 'ventas:lista_productos' %}" class="card-inf">
+                <div class="card-bg"></div>
+                <div class="card-body">
+                    <p>PRODUCTOS</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Tarjeta de Ventas-->
+    <div class="card tarjeta text-center">
+        <div class="card-sup">
+            <div class="item-card-sup"></div>
+            <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtDPccfOR2eGuyds1NYDxX4oDc4xVB4owziA&s"
+                    alt="Ventas"
+                    class="img-te"
+            />
+        </div>
+        
+        <div class="card-box">
+            <a href="{% url 'ventas:ventas' %}"  class="card-inf">
+                <div class="card-bg"></div>
+                <div class="card-body">
+                    <p>VENTAS</p>
+                </div>
+            </a>
+        </div>
+    </div>
+   
+    
+</section>
+
+{% endblock %}

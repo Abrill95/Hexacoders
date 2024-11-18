@@ -11,16 +11,25 @@
     <a href="{% url 'home' %}" class="nav-link">Home</a>
 </li>
 <li class="nav-item">
-    <a href="{% url 'ventas:productos' %}" class="nav-link">Productos</a>
+    <a href="{% url 'ventas:lista_productos' %}" class="nav-link">Productos</a>
 </li>
 <li class="nav-item">
     <a href="{% url 'ventas:proveedores' %}" class="nav-link">Proveedores</a>
 </li>
 <li class="nav-item">
     <a href="{% url 'ventas:clientes' %}" class="nav-link">Clientes</a>
+
+</li>
+
+<li class="nav-item active">
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn-sesion nav-link">Cerrar sesión</button>
+    </form>
+</li>
 {% endblock %}
-    
-    
+    {% block login %}
+    {% endblock %}
     <!--Titulo del hero-->
     {% block title-pag %}
     VENTAS

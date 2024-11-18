@@ -27,6 +27,7 @@ header {
 .scrolled {
   padding:1% 0 1% 0;
   margin-top: -12px;
+  padding-right:20%;
   background-color:#359381;
   transition:background-color 0.3s ease-in-out;
 }
@@ -63,8 +64,18 @@ header {
   transition: background-color 0.3s;
 
 }
-.navbar-nav .nav-link:hover ,.navbar-nav .nav-link.active {
+.scrolled .navbar-nav .nav-link:hover{
   background-color: #024438;
+  color: #fff;
+  border-radius: 20px;
+}
+.navbar-nav .nav-link:hover{
+  background-color: #359381;
+  color: #fff;
+  border-radius: 20px;
+}
+.active .nav-link{
+  background-color: #359381;
   color: #fff;
   border-radius: 20px;
 }
@@ -116,6 +127,41 @@ button i {
 .navbar-toggler{
   margin-right: 5%;
 }
+.scrolled .navbar-toggler{
+  margin-right: -20% !important;
+}
+
+.login-link {
+  position: relative;
+}
+.menu-login {
+  display: none;
+  position: absolute;
+  background-color: rgba(49, 107, 81, 0.93);
+  border-radius: 10%;
+  margin-top: 3%;
+  padding: 5px;
+  color: #eeeff1;
+  width: 200px;
+  height: 140px;
+  z-index: 1000;
+}
+.menu-login li{
+  padding-top: 20px;
+  list-style: none;
+  margin-left: -15% !important;
+}
+
+.login-link:hover .menu-login,
+.menu-login:hover {
+  display: block;
+}
+
+
+.btn-sesion{
+  width: 100%;
+  top:-5%
+}
 @media (min-width: 992px) and (max-width: 1200px)  {
   .nav{
     margin-right: 50%;
@@ -151,6 +197,18 @@ button i {
 }
 
 @media (max-width: 992px) {
+  .btn-sesion{
+    width: 30% !important;
+  }
+  .scrolled .btn-sesion{
+    text-align: left;
+    width: 100% !important;
+  }
+  .navbar-nav .nav-link:hover{
+    background-color: #024438;
+    color: #fff;
+    border-radius: 20px;
+  }
   .nav-search-div{
     display:block !important;
   }

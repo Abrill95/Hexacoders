@@ -1,15 +1,15 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}Proveedores{% endblock %}
+{% block title %}Productos{% endblock %}
 {% block css %}
-<link rel="stylesheet" href="{% static 'core/css/estilosVenta.css' %}" />
+<link rel="stylesheet" href="{% static 'core/css/estilosVentas.css' %}" />
 {% endblock %}
 {% block nav %}
 <li class="nav-item">
     <a href="{% url 'home' %}" class="nav-link">Home</a>
 </li>
 <li class="nav-item">
-    <a href="{% url 'ventas:lista_productos' %}" class="nav-link">Productos</a>
+    <a href="{% url 'ventas:proveedores' %}" class="nav-link">Proveedores</a>
 </li>
 <li class="nav-item">
     <a href="{% url 'ventas:clientes' %}" class="nav-link">Clientes</a>
@@ -31,13 +31,14 @@
 
 <!--Titulo del hero-->
 {% block title-pag %}
-PROVEEDORES
+PRODUCTOS
 {% endblock %}
 
 <!--Background del banner/hero -->
 {% block image-banner %}
 <div class="bg-img-cover animation-move bg-pos-center-center"
-         style="background-image: url(https://media.licdn.com/dms/image/v2/C561BAQG3Dilva7lUDw/company-background_10000/company-background_10000/0/1585448951064/designcodeio_cover?e=2147483647&v=beta&t=qx-Vr_5cVSHVaSX4a2TNKVid7wvf0dN9VlM9_9qvBbQ)"></div>
+     style="background-image: url('{% static "core/img/banner3.jpg" %}')"
+></div>
 {% endblock %}
 
 {% block content %}
@@ -47,15 +48,30 @@ PROVEEDORES
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th>Código</th>
                     <th>Nombre</th>
-                    <th>Email</th>
+                    <th>Precio</th>
+                    <th>Disponible</th>
+                    <th>Stock</th>
+                    <th>Proveedores</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
-                {% for proveedor in proveedores %}
+                {% for producto in productos %}
                 <tr>
-                    <td>{{ proveedor.nombre }}</td>
-                    <td>{{ proveedor.email }}</td>
+                    <td>{{ producto.codigo }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.disponible }}</td>
+                    <td>{{ producto.cantidad }}</td>
+                    <td> {% if producto.proveedores.all %}
+                        {% for proveedor in producto.proveedores.all %}
+                        {{ proveedor.nombre }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                        {% else %}
+                        No tiene proveedores asignados.
+                        {% endif %}</td>
                 </tr>
                 {% endfor %}
                 </tbody>

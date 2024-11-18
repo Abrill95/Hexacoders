@@ -1,9 +1,5 @@
 from django.db import models
 
-
-def __str__(self):
-    return f"{self.nombre} {self.apellido}"
-
 class Proveedor(models.Model):
     nombre = models.CharField(max_length=100)
     email = models.EmailField()
@@ -38,8 +34,6 @@ class ImagenProducto(models.Model):
         Producto, on_delete=models.CASCADE, related_name='imagenes')
     imagen = models.ImageField(upload_to='productos/galeria/')
 
-def __str__(self):
-        return self.nombre
 
 class Cliente(models.Model):
     nombre = models.CharField(max_length=100)

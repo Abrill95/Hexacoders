@@ -7,19 +7,19 @@
 {% endblock %}
 
 {% block nav %}
-<li class="nav-item">
+<li class="nav-item ">
     <a href="{% url 'home' %}" class="nav-link">Home</a>
 </li>
 <li class="nav-item">
-    <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
+    <a href="{% url 'contacto' %}" class="nav-link ">Contacto</a>
+</li>
+<li class="nav-item active">
+    <a href="{% url 'acercade' %}" class="nav-link">Acerca de</a>
 </li>
 <li class="nav-item">
-    <a href="{% url 'ventas:productos' %}" class="nav-link">Productos</a>
+    <a href="{% url 'ventas:productos' %}" class="nav-link ">Productos</a>
+</li>
 
-</li>
-<li class="nav-item">
-    <a href="{% url 'ventas:ventas' %}" class="nav-link ">Ventas</a>
-</li>
 {% endblock %}
 
 {% block title-pag %}
@@ -149,7 +149,7 @@ SOBRE NOSOTROS
             </div>
         </div>
     </section>
-    <!--Esta parte sera de los integrantes del grupo-->
+    <!-- Integrantes del grupo-->
     <div class="row">
         <div class="col text-center">
             <h4 class="fw-bold text-uppercase mb-4 border-bottom pb-2">

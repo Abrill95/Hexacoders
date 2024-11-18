@@ -14,6 +14,11 @@ def productos(request):
     productos_page = paginator.get_page(page_number)  #
     return render(request, "productos.html", {'productos': productos_page})
 
+def lista_productos(request):
+    productos = Producto.objects.all()
+    return render(request, "lista_productos.html", {'productos': productos})
+
+
 def listar_clientes(request):
     clientes = Cliente.objects.all()
     return render(request, 'lista_clientes.html', {'clientes': clientes})
