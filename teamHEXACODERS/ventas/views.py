@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from django.core.paginator import Paginator  
+from django.core.paginator import Paginator
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Producto, Cliente, Proveedor,Venta
 from django.db.models import Q
-
-
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 def productos(request):
     productos = Producto.objects.all()
@@ -20,7 +18,7 @@ def productos(request):
     productos_page = paginator.get_page(page_number)  #
     return render(request, "productos.html", {'productos': productos_page})
 
-# Modificando para usar ListView cliente
+# ListView cliente
 class ClienteListView(ListView):
     model = Cliente
     template_name = 'lista_clientes.html'
@@ -30,7 +28,7 @@ class ClienteListView(ListView):
         query = self.request.GET.get('q','')
         if query:
             return Cliente.objects.filter(
-                Q(nombre__icontains=query) | 
+                Q(nombre__icontains=query) |
                 Q(apellido__icontains=query) |
                 Q(email__icontains=query) |
                 Q(celular__icontains=query)
@@ -50,21 +48,20 @@ class ProveedorListView(ListView):
                 Q(nombre__icontains=query) | Q(email__icontains=query)
             )
         return Proveedor.objects.all()
-    
-    
-from django.views.generic.edit import CreateView 
+
+
+
 # Usando CreateView pra cliente
 class ClienteCreateView(CreateView):
     model = Cliente
-    fields = ['nombre', 'apellido', 'email', 'celular', 'foto']  
+    fields = ['nombre', 'apellido', 'email', 'celular', 'foto']
     template_name = 'cliente_form.html'
-    success_url = reverse_lazy('ventas:clientes')    
+    success_url = reverse_lazy('ventas:clientes')
 
-from django.views.generic.edit import UpdateView
 # Usando  UpdateView para cliente
 class ClienteUpdateView(UpdateView):
     model = Cliente
-    fields = ['nombre', 'apellido', 'email', 'celular', 'foto'] 
+    fields = ['nombre', 'apellido', 'email', 'celular', 'foto']
     template_name = 'cliente_form.html'
     success_url = reverse_lazy('ventas:clientes')
 
@@ -74,8 +71,6 @@ class ClienteDeleteView(DeleteView):
     template_name = 'cliente_confirm_delete.html'
     success_url = reverse_lazy('ventas:clientes')
 
-
-from django.views.generic.edit import CreateView 
 # Usando Create Vieew para Proveedor
 class ProveedorCreateView(CreateView):
     model = Proveedor
@@ -83,11 +78,10 @@ class ProveedorCreateView(CreateView):
     template_name = 'proveedor_form.html'
     success_url = reverse_lazy('ventas:proveedores')
 
-from django.views.generic.edit import UpdateView
 # Usando  UpdateView para Proveedor
 class ProveedorUpdateView(UpdateView):
     model = Proveedor
-    fields = ['nombre', 'email'] 
+    fields = ['nombre', 'email']
     template_name = 'proveedor_form.html'
     success_url = reverse_lazy('ventas:proveedores')
 
