@@ -1,7 +1,10 @@
+from django.shortcuts import render
+from django.core.paginator import Paginator  
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Producto, Cliente, Proveedor,Venta
 from django.db.models import Q
+
 
 from django.views.generic.edit import CreateView
 
