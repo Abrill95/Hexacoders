@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import ClienteCreateView, ClienteUpdateView, ClienteDeleteView, ProveedorCreateView, ProveedorUpdateView, ProveedorDeleteView, ClienteListView, ProveedorListView # Para que reconozca los elementos dse la clase 
+from .views import ClienteCreateView, ClienteUpdateView, ClienteDeleteView, ProveedorCreateView, ProveedorUpdateView, ProveedorDeleteView, ClienteListView, ProveedorListView, VentaListView, VentaCreateView, VentaDetailView  # Para que reconozca los elementos dse la clase 
 app_name = 'ventas'
 urlpatterns = [
     path('productos/', views.productos, name='productos'),
@@ -25,7 +25,10 @@ urlpatterns = [
     # Usando DeleteView para proveedor
     path('proveedores/<int:pk>/eliminar/', ProveedorDeleteView.as_view(), name='proveedor_delete'),
 
-
+    #Ventas
+    path('ventas/', VentaListView.as_view(), name='ventas'),
+    path('ventas/nueva/', VentaCreateView.as_view(), name='venta_add'),
+    path('ventas/<int:pk>/', VentaDetailView.as_view(), name='venta_detail'),
 
     path('clientes/', views.listar_clientes, name='clientes'),
     path('proveedores/', views.listar_proveedores, name='proveedores'),

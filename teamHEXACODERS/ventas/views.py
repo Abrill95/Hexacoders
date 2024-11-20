@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from django.urls import reverse_lazy
 from .models import Producto, Cliente, Proveedor,Venta
 from django.db.models import Q
@@ -49,7 +49,21 @@ class ProveedorListView(ListView):
             )
         return Proveedor.objects.all()
 
+# ListView para ventas
+class VentaListView(ListView):
+    model = Venta
+    template_name = 'lista_ventas.html'
+    context_object_name = 'ventas'
 
+    def get_queryset(self):
+        query_cliente = self.request.GET.get('cliente', '')
+        query_fecha = self.request.GET.get('fecha', '')
+        queryset = Venta.objects.all()
+        if query_cliente:
+            queryset = queryset.filter(cliente__nombre__icontains=query_cliente)
+        if query_fecha:
+            queryset = queryset.filter(fecha__date=query_fecha)
+        return queryset
 
 # Usando CreateView pra cliente
 class ClienteCreateView(CreateView):
@@ -91,7 +105,18 @@ class ProveedorDeleteView(DeleteView):
     template_name = 'proveedor_confirm_delete.html'
     success_url = reverse_lazy('ventas:proveedores')
 
+# CreateView para crear una venta
+class VentaCreateView(CreateView):
+    model = Venta
+    template_name = 'venta_form.html'
+    fields = ['cliente', 'producto', 'cantidad']
+    success_url = reverse_lazy('ventas:ventas')
 
+# DetailView para los detalles de las ventas
+class VentaDetailView(DetailView):
+    model = Venta
+    template_name = 'venta_detalle.html'
+    context_object_name = 'venta'
 
 def listar_clientes(request):
     clientes = Cliente.objects.all()
