@@ -45,6 +45,9 @@ class Cliente(models.Model):
     updated = models.DateTimeField(auto_now=True)
     favoritos = models.ManyToManyField(Producto, related_name='clientes_favoritos', blank=True)
 
+    def __str__(self):
+        return f"{self.nombre} {self.apellido}"
+    
 class Venta(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
