@@ -44,27 +44,22 @@
 
 {% block content %}
 <div class="container mt-5">
-    <div class="row my-4">
-        <div class="col-md-12">
-            <table class="table table-striped table-hover">
-                <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cliente</th>
-                    <th>Fecha</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for venta in ventas %}
-                <tr>
-                    <td>{{ venta.producto.nombre }}</td>
-                    <td>{{ venta.cliente.nombre }} {{ venta.cliente.apellido }}</td>
-                    <td>{{ venta.fecha }}</td>
-                </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <h2>Listado de Ventas</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr><th>Producto</th><th>Cliente</th><th>Fecha</th></tr>
+        </thead>
+        <tbody>
+        {% for venta in ventas %}
+        <tr>
+            <td>{{ venta.producto.nombre }}</td>
+            <td>{{ venta.cliente.nombre }} {{ venta.cliente.apellido }}</td>
+            <td>{{ venta.fecha }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">No se encontraron ventas.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}

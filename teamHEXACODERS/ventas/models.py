@@ -40,14 +40,14 @@ class Cliente(models.Model):
     apellido = models.CharField(max_length=100)
     email = models.EmailField()
     celular = models.CharField(max_length=15)
-    foto = models.ImageField(upload_to='clientes/', blank=True, null=True)
+    foto = models.ImageField(upload_to='media/', blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     favoritos = models.ManyToManyField(Producto, related_name='clientes_favoritos', blank=True)
 
     def __str__(self):
         return f"{self.nombre} {self.apellido}"
-    
+
 class Venta(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2)

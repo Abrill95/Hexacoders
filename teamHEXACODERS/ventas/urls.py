@@ -3,10 +3,20 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import ClienteCreateView, ClienteUpdateView, ClienteDeleteView, ProveedorCreateView, ProveedorUpdateView, ProveedorDeleteView, ClienteListView, ProveedorListView # Para que reconozca los elementos dse la clase 
+from .views import ClienteCreateView, ClienteUpdateView, ClienteDeleteView, ProveedorCreateView, ProveedorUpdateView, ProveedorDeleteView, ClienteListView, ProveedorListView,ProductoCreateView,ProductoListView,ProductoDeleteView,ProductoUpdateView
 app_name = 'ventas'
 urlpatterns = [
-    path('productos/', views.productos, name='productos'),
+    path('productos-venta/', views.productos, name='productos'),
+
+    path('productos/', ProductoListView.as_view(), name='lista_productos'),
+
+    path('productos/agregar/', ProductoCreateView.as_view(), name='producto_add'),
+
+    path('productos/<int:pk>/editar/', ProductoUpdateView.as_view(), name='producto_edit'),
+
+    path('productos/<int:pk>/eliminar/', ProductoDeleteView.as_view(), name='producto_delete'),
+
+
     # Modificando para usar ListView cliente
     path('clientes/', ClienteListView.as_view(), name='clientes'),
     #  Usando CreateViews para cliente
@@ -27,7 +37,6 @@ urlpatterns = [
 
 
 
-    path('clientes/', views.listar_clientes, name='clientes'),
     path('proveedores/', views.listar_proveedores, name='proveedores'),
     path('lista_ventas/', views.listar_ventas, name='ventas'),
 ]
