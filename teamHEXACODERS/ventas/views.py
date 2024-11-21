@@ -75,6 +75,13 @@ class ClienteCreateView(CreateView):
     fields = ['nombre', 'apellido', 'email','celular','foto']
     template_name = 'forms/cliente_form.html'
     success_url = reverse_lazy('ventas:clientes')
+    def form_valid(self, form):
+        print("Formulario enviado correctamente")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        print("Error en el formulario")
+        return super().form_invalid(form)
 
 class ClienteUpdateView(UpdateView):
     model = Cliente
