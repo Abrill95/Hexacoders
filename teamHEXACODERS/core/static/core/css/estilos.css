@@ -188,6 +188,13 @@ button i {
   .logo {
     width: 100px;
   }
+  .menu-login{
+    height: 180px;
+  }
+  .login-link:hover .menu-login,
+  .menu-login:hover{
+  transform: translateX(-100%) translateY(-40%)!important;
+  }
   .navbar-collapse .nav-search-div {
     transform: translateY(600%) translateX(5%)!important;
   }

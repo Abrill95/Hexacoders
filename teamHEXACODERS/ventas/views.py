@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView,DetailView
 from django.urls import reverse_lazy
 from .models import Producto, Cliente, Proveedor,Venta
 from django.db.models import Q
 from django.views.generic.edit import CreateView, UpdateView
+from django import forms
 
 def productos(request):
     productos = Producto.objects.all()
@@ -118,13 +119,44 @@ class ProveedorCreateView(CreateView):
 class ProveedorUpdateView(UpdateView):
     model = Proveedor
     fields = ['nombre', 'email']
-    template_name = 'forms/proveedor_form.html'
+    template_name = 'forms/proveedor_update_form.html'
     success_url = reverse_lazy('ventas:proveedores')
 
 class ProveedorDeleteView(DeleteView):
     model = Proveedor
     template_name = 'forms/confirm_delete.html'
     success_url = reverse_lazy('ventas:proveedores')
+
+class VentaListView(ListView):
+    model = Venta
+    template_name = 'lista_ventas.html'
+    context_object_name = 'ventas'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q', '')
+        if query:
+            ventas = Venta.objects.filter(
+                Q(precio__icontains=query) |
+                Q(producto__nombre__icontains=query) |
+                Q(cliente__nombre__icontains=query)
+            )
+
+            return ventas
+        return Venta.objects.all()
+
+# CreateView para crear una venta
+class VentaCreateView(CreateView):
+    model = Venta
+    template_name = 'forms/venta_form.html'
+    fields = ['producto','cliente', 'precio']
+    success_url = reverse_lazy('ventas:ventas')
+    producto = forms.ModelChoiceField(queryset=Producto.objects.all(), label="Producto", empty_label="Seleccione un producto")
+    cliente = forms.ModelChoiceField(queryset=Cliente.objects.all(), label="Cliente", empty_label="Seleccione un cliente")
+# DetailView para los detalles de las ventas
+class VentaDetailView(DetailView):
+    model = Venta
+    template_name = 'forms/venta_detalle.html'
+    context_object_name = 'venta'
 
 
 

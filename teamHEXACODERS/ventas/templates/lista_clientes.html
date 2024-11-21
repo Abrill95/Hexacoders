@@ -22,13 +22,19 @@
 {% block title-pag %}
 CLIENTES
 {% endblock %}
+<!--Background del banner/hero -->
+{% block image-banner %}
+<div class="bg-img-cover animation-move bg-pos-center-center"
+     style="background-image: url(https://media.licdn.com/dms/image/v2/C561BAQG3Dilva7lUDw/company-background_10000/company-background_10000/0/1585448951064/designcodeio_cover?e=2147483647&v=beta&t=qx-Vr_5cVSHVaSX4a2TNKVid7wvf0dN9VlM9_9qvBbQ)"
+></div>
+{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
     <!-- Formulario de búsqueda -->
-    <form method="get" class="form-inline my-3">
-        <input type="text" name="q" class="form-control mr-2" placeholder="Buscar por nombre o apellido" value="{{ request.GET.q }}">
-        <button type="submit" class="btn btn-primary">Buscar</button>
+    <form method="get" class="form-inline busqueda">
+            <input type="text" name="q" class="form-control" placeholder="Buscar por nombre o apellido" value="{{ request.GET.q }}">
+            <button type="submit" class="btn btn-primary ">Buscar</button>
         <a href="{% url 'ventas:cliente_add' %}" class="btn btn-success ml-2">Agregar Cliente</a>
     </form>
     

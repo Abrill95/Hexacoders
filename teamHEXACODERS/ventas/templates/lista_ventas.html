@@ -46,11 +46,12 @@
 <div class="container mt-5">
    
     <!-- Formulario de búsqueda -->
-    <form method="get" class="form-inline my-3">
-        <input type="text" name="q" class="form-control mr-2" placeholder="Buscar por producto" value="{{ request.GET.q }}">
+    <form method="get" class="form-inline busqueda">
+        <input type="text" name="q" class="form-control" placeholder="Buscar por producto o cliente" value="{{ request.GET.q }}">
         <button type="submit" class="btn btn-primary">Buscar</button>
         <a href="{% url 'ventas:venta_add' %}" class="btn btn-success ml-2">Agregar Venta</a>
     </form>
+
     <table class="table table-striped table-hover">
         <thead>
         <tr><th>Producto</th><th>Cliente</th><th>Fecha</th><th>Acciones</th></tr>
@@ -62,8 +63,8 @@
             <td>{{ venta.cliente.nombre }} {{ venta.cliente.apellido }}</td>
             <td>{{ venta.fecha }}</td>
             <td>
-                <a href="{% url 'ventas:venta_edit' venta.pk %}" class="btn btn-warning btn-sm">Editar</a>
-                <a href="{% url 'ventas:venta_delete' venta.pk %}" class="btn btn-danger btn-sm">Eliminar</a>
+                <a href="{% url 'ventas:venta_detail' venta.pk %}" class="btn btn-warning btn-sm">Ver detalles</a>
+               
             </td>
         </tr>
         {% empty %}

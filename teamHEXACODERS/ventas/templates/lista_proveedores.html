@@ -44,8 +44,8 @@ PROVEEDORES
 <div class="container mt-5">
   
     <!-- Formulario de búsqueda -->
-    <form method="get" class="form-inline my-3">
-        <input type="text" name="q" class="form-control mr-2" placeholder="Buscar por nombre " value="{{ request.GET.q }}">
+    <form method="get" class="form-inline busqueda">
+        <input type="text" name="q" class="form-control " placeholder="Buscar por nombre " value="{{ request.GET.q }}">
         <button type="submit" class="btn btn-primary">Buscar</button>
         <a href="{% url 'ventas:proveedor_add' %}" class="btn btn-success ml-2">Agregar Proveedor</a>
     </form>

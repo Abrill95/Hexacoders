@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import ClienteCreateView, ClienteUpdateView, ClienteDeleteView, ProveedorCreateView, ProveedorUpdateView, ProveedorDeleteView, ClienteListView, ProveedorListView,ProductoCreateView,ProductoListView,ProductoDeleteView,ProductoUpdateView
+from .views import ClienteCreateView, ClienteUpdateView, ClienteDeleteView, ProveedorCreateView, ProveedorUpdateView, ProveedorDeleteView, ClienteListView, ProveedorListView,ProductoCreateView,ProductoListView,ProductoDeleteView,ProductoUpdateView, VentaCreateView,VentaDetailView,VentaListView
 app_name = 'ventas'
 urlpatterns = [
     path('productos-venta/', views.productos, name='productos'),
@@ -35,8 +35,9 @@ urlpatterns = [
     # Usando DeleteView para proveedor
     path('proveedores/<int:pk>/eliminar/', ProveedorDeleteView.as_view(), name='proveedor_delete'),
 
+    #Ventas
+    path('ventas/', VentaListView.as_view(), name='ventas'),
+    path('ventas/nueva/', VentaCreateView.as_view(), name='venta_add'),
+    path('ventas/<int:pk>/', VentaDetailView.as_view(), name='venta_detail'),
 
-
-    path('proveedores/', views.listar_proveedores, name='proveedores'),
-    path('lista_ventas/', views.listar_ventas, name='ventas'),
 ]

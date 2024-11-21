@@ -25,3 +25,22 @@ h2 {
     font-size: 2rem;
     font-weight: bold;
 }
+.busqueda{
+    display:inline-flex;
+    width: 100%;
+    max-height: 10%;
+}
+
+.form-control{
+    width: 60%;
+    height: 20%;
+    margin: auto 5% auto 0;
+}
+
+
+@media (max-width:990px) {
+    .proveedores-display {
+        display: none;
+    }
+
+}

@@ -1,19 +1,28 @@
 {% extends 'core/base.html' %}
-{% block title %}Eliminar Cliente{% endblock %}
+{% load static %}
+{% block title %}Borrar dato{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/estilosFormularios.css' %}" />
+{% endblock %}
 {% block login %}
 {% endblock %}
 {% block hero %}
 {% endblock %}
 {% block content %}
-<div class="container mt-5">
+<div class="container mt-5 form-container">
     <div class="row justify-content-center">
-        <div class="col-md-6 text-center">
-            <form action="" method="post">
-                {% csrf_token %}
-                <p>¿Estás seguro de que quieres eliminar a <b>"{{ object }}"</b>?</p>
-                <input type="submit" class="btn btn-primary btn-block" value="Confirmar" />
-                <a class="nav-link btn btn-secondary btn-block" href="{% url 'ventas:clientes' %}">Cancelar</a>
-            </form>
+        <div class="col-lg-6">
+            <div class="card shadow-lg p-4 border-0 text-center">
+                <h2 class="mb-4 text-center text-primary fw-bold">Eliminar Cliente</h2>
+                <form action="" method="post" class="d-flex flex-column align-items-center">
+                    {% csrf_token %}
+                    <p class="text-secondary mb-4">¿Estás seguro de que quieres eliminar a <b>"{{object.nombre}}"</b>?</p>
+                    <div class="d-flex gap-3 w-100 buttons-sub">
+                        <input type="submit" class="btn btn-danger shadow-sm px-4" value="Confirmar">
+                        <a href="{% url 'ventas:clientes' %}" class="btn btn-outline-secondary shadow-sm px-4">Cancelar</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

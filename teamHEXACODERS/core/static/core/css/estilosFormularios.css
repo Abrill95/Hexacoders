@@ -70,7 +70,14 @@ body {
     background-color: rgb(2, 68, 56);
 }
 
-
+.imagen-venta{
+    width: 30%;
+    height: 100%;
+    margin: auto;
+}
+.mb-3{
+    display: flex;
+}
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -1,39 +1,45 @@
 {% extends 'core/base.html' %}
+{% load static %}
 {% block title %}Crear Cliente{% endblock %}
-{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/estilosFormularios.css' %}" />
+{% endblock %}
 {% block login %}
 {% endblock %}
 {% block hero %}
 {% endblock %}
 
-<div class="container mt-5">
-    <h2 class="mb-4 text-center">Agregar Nueva Venta</h2>
+{% block content %}
+<div class="container mt-5 form-container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="id_nombre">Nombre</label>
-                    {{ form.nombre }}
-                </div>
-                <div class="form-group">
-                    <label for="id_apellido">Apellido</label>
-                    {{ form.apellido }}
-                </div>
-                <div class="form-group">
-                    <label for="id_email">Email</label>
-                    {{ form.email }}
-                </div>
-                
-                <div class="form-group">
-                    <label for="id_foto">Foto</label>
-                    <input type="file" name="foto" id="id_foto" accept="image/*">
-                </div>
-                <div class="text-center">
-                    <input type="submit" class="btn btn-primary btn-block" value="Crear">
-                    <a class="nav-link" href="{% url 'ventas:clientes' %}">Cancelar</a>
-                </div>
-            </form>
+        <div class="col-lg-6">
+            <div class="card shadow-lg p-4 border-0">
+                <h2 class="mb-4 text-center text-primary fw-bold">Agregar Nueva Venta</h2>
+                <form method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-center">
+                    {% csrf_token %}
+                    <div class="form-group mb-4 w-100">
+                        <label for="id_producto" class="form-label text-secondary fw-semibold">Producto</label>
+                        {{ form.producto }}
+                    </div>
+                    <div class="form-group mb-4 w-100">
+                        <label for="id_cliente" class="form-label text-secondary fw-semibold">Cliente</label>
+                        {{ form.cliente }}
+                    </div>
+            
+                    <div class="form-group mb-4 w-100">
+                        <label for="id_precio" class="form-label text-secondary fw-semibold">Precio</label>
+                        <input type="number"step="0.01"  id="id_precio" name="precio"
+                               class="form-control shadow-sm" value="{{ form.precio.value|default:'' }}">
+                    </div>
+                  
+                  
+                    <div class="d-flex gap-3 w-100 buttons-sub">
+                        <a href="{% url 'ventas:ventas' %}" class="btn btn-outline-secondary shadow-sm px-4">Cancelar</a>
+                        
+                        <input type="submit" class="btn btn-primary shadow-sm px-4" value="Crear">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
