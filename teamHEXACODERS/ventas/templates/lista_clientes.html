@@ -17,6 +17,15 @@
 <li class="nav-item">
     <a href="{% url 'ventas:ventas' %}" class="nav-link">Ventas</a>
 </li>
+<li class="nav-item active">
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn-sesion nav-link">Cerrar sesión</button>
+    </form>
+</li>
+{% endblock %}
+
+{% block login %}
 {% endblock %}
 
 {% block title-pag %}
