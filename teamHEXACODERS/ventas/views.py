@@ -16,10 +16,16 @@ def productos(request):
     page_number = request.GET.get('page')
 
     # Obtiene los productos para esa página
-    productos_page = paginator.get_page(page_number)  #
-    return render(request, "productos.html", {'productos': productos_page})
+    productos_page = paginator.get_page(page_number)
+    productos_tendencia = Producto.objects.filter(es_tendencia=True)[:3]
+    productos_destacados = Producto.objects.filter(es_destacado=True)[:4]
+    return render(request, 'productos.html', {
+        'productos_tendencia': productos_tendencia,
+        'productos_destacados': productos_destacados,
+        'productos': productos_page
+    })
 
-#Productos
+
 class ProductoListView(ListView):
     model=Producto
     template_name='lista_productos.html'

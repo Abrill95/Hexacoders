@@ -17,7 +17,8 @@ class Producto(models.Model):
     cantidad = models.IntegerField()
     imagen_principal = models.ImageField(upload_to='productos/')
     proveedores = models.ManyToManyField(Proveedor, related_name='productos')
-
+    es_tendencia = models.BooleanField(default=False)
+    es_destacado = models.BooleanField(default=False)
 
     def calcular_descuento(self):
         if self.precioAnterior and self.precioAnterior > 0:

@@ -1,37 +1,43 @@
-
-main .container-acercade {
-  margin-top: 10% !important;
-  margin-bottom: 5%;
-}
-
-.info {
-  margin-bottom: 10%;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h6 {
-  font-family: "Open Sans", sans-serif;
-  color: #040303;
-}
-
 .text-light-green {
   color: #32cd32;
 }
-.text-blue {
-  color: #03346e;
+
+.container-acercade h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
 }
-.text-red {
-  color: #ff0000;
+
+.container-acercade p {
+  font-family: "Roboto", sans-serif;
 }
-h3, p, .card-title, .card-text {
-  text-align: left;
+
+.card {
+  transition: transform 0.3s ease;
 }
-h1, h2 {
-  text-align: left;
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.bg-primary {
+  background-color: #03346e;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /**----  Tarjetas de presentación------**/

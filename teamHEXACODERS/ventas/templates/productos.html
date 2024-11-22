@@ -29,7 +29,7 @@ PRODUCTOS
 
 <!--Zona de botones del banner/hero-->
 {% block buttons %}
-<a href="#formulario" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
+<a href="#tendencias" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
 ><span> TENDENCIAS
     <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
 <a href="#disponibles" class="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
@@ -112,8 +112,76 @@ PRODUCTOS
       </div>
     </div>
   </div>
-
-  <section class="py-5 todos-productos-principal" id="disponibles">
+    
+    <!--PRODUCTOS EN TENDENCIA-->
+    <section id="tendencias" class="container-destacados mt-5">
+        <div class="row">
+            <!-- Carrusel de productos a la izquierda -->
+            <div class="col-md-7">
+                <h2 class="text-center  mb-4 card-title fs-1">Tendencias</h2>
+                <div id="carouselTendencias" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for producto in productos_tendencia %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <img
+                                    src="{{ producto.imagen_principal.url }}"
+                                    class="d-block image-product1"
+                                    alt="{{ producto.nombre }}"
+                            />
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTendencias" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTendencias" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Productos destacados a la derecha -->
+            <div class="col-md-5 featured-products">
+                <div class="row">
+                    {% for producto in productos_destacados %}
+                    <div class="col-md-6 product-item">
+                        <img class="image-rigth" src="{{ producto.imagen_principal.url }}" alt="{{ producto.nombre }}" />
+                        <h5 class="card-title">{{ producto.nombre }}</h5>
+                        <p class="card-price">${{ producto.precio }}</p>
+                        <button   onclick="mostrarMensaje()" type="button" data-mdb-button-init data-mdb-ripple-init class="add-to-cart">
+                       <span>COMPRAR</span>
+                        </button>
+                    </div>
+                    <!-- Mensaje -->
+                    <div
+                            id="mensaje"
+                            class="toast position-fixed top-0 end-0 p-3"
+                            role="alert"
+                            aria-live="assertive"
+                            aria-atomic="true"
+                            style="z-index: 1050; display: none;">
+                        <div class="toast-header">
+                            <strong class="me-auto">Aviso</strong>
+                            <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="toast"
+                                    aria-label="Cerrar"></button>
+                        </div>
+                        <div class="toast-body">
+                            ¡Agregado al carrito de compras!
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TODOS LOS PRODUCTOS-->
+    <section class="py-5 todos-productos-principal" id="disponibles">
     <h1 class="text-center mb-4 card-title fs-1">Productos Disponibles</h1>
     <div class="container">
       <div class="row   justify-content-center">
@@ -144,12 +212,32 @@ PRODUCTOS
                 <p class="card-coutas">en 6 x ${{ producto.calcular_coutas}}</p>
               </div>
             </div>
-            <button type="button" class="btn-comprar btn-primary" >
+            <button   onclick="mostrarMensaje()" type="button" class="btn-comprar btn-primary" >
               COMPRAR
             </button>
           </div>
 
         </div>
+          <!-- Mensaje -->
+          <div
+                  id="mensaje"
+                  class="toast position-fixed top-0 end-0 p-3"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                  style="z-index: 1050; display: none;">
+              <div class="toast-header">
+                  <strong class="me-auto">Aviso</strong>
+                  <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="toast"
+                          aria-label="Cerrar"></button>
+              </div>
+              <div class="toast-body">
+                  ¡Agregado al carrito de compras!
+              </div>
+          </div>
 
         <!-- Modal para galería de imágenes -->
         <div
@@ -266,5 +354,29 @@ PRODUCTOS
       </nav>
     </div>
   </section>
+    
+    
+    <!--Testimonios-->
+    <section class="footer-testimonios">
+        
+        <h2 class=" text-center title animate__animated animate__backInLeft mb-4 card-title fs-1" >Testimonios de nuestros Clientes</h2>
+        <div class="scroll-container">
+            <div class="scroll-content"></div>
+            
+            <div
+                    class="embedsocial-reviews"
+                    data-ref="1c5f3ff0ebcf42caeee33768f0805bdaaaf3dda6"
+            >
+                <iframe
+                        src="https://embedsocial.com/api/reviews/widget/1c5f3ff0ebcf42caeee33768f0805bdaaaf3dda6/"
+                        class="embedsocial-reviews-iframe"
+                        title="EmbedReviews widget"
+                        style="width: 100%; height: 506px; border: 0px; overflow: hidden"
+                        scrolling="no"
+                ></iframe>
+            </div>
+        </div>
+        </div>
+    </section>
 </main>
 {% endblock %}
